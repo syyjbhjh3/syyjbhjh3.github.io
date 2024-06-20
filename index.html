@@ -373,13 +373,17 @@
               </ul>
             </div>
            <div class="resume-item">
+              <h4>SQLD</h4>
+              <h5>2024.06.21</h5>
+           </div>
+           <div class="resume-item">
+              <h4>정보처리기사</h4>
+              <h5>2024.06.18</h5>
+           </div>
+           <div class="resume-item">
               <h4>CKA</h4>
               <h5>2024.03</h5>
-            </div>
-            <div class="resume-item">
-              <h4>운전면허 2종보통</h4>
-              <h5>2018.05</h5>
-            </div>
+           </div>
            <div class="resume-item">
               <h4>정보처리산업기사</h4>
               <h5>2016.11</h5>
@@ -392,8 +396,33 @@
               <h5>2023.03 ~</h5>
               <p><em>Cloud Dev 1 / 선임 연구원</em></p>
               <ul>
+                <li><h5>CMP V2​</h5><br/>
+                    <h5>2024.06.01 ~ </h5><br/>
+                    기존 4대보험 CMP를 기준으로 MSA Architecture 형식으로 전환<br/>
+                    Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입<br/>
+                    
+                    환경 구축
+                    Open Source Helm Deploy
+                     - RabbitMQ, Jenkins, Gitea, ArgoCD, Kiali(Istio), OPA Gatekeeper
+                       개발환경에 맞게 Values.yaml Cumstomizing 이후 배포
+
+                    
+                    Pipeline 구축
+                    
+                    Gitea, Jenkins, ArgoCD를 이용한 CI/CD Pipeline 구축
+                    Jenkins의 MultibranchProject, Gitea Webhook을 연동
+                    Application을 Helm Chart화하고 helm Template으로 생성된 Manifests 파일을 이용해
+                    ArgoCD가 Kubernetes 환경에 자동 배포 될 수 있도록 Pipeline 구축
+
+                    
+                    모니터링, Kubernetes 환경 개발
+                    
+                    istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속
+                    Jaeger, Kiali를 통한 Istio 환경 모니터링을 구축
+                    OPA Gatekeeper를 이용하여 개발자 에러 최소화 정책 수립, Image Tag, NS Label 검증
+                </li>
                 <li><h5>Viola Service Mesh​</h5><br/>
-                    <h5>2024.05.12~ </h5><br/>
+                    <h5>2024.05.12 ~ 2024.05.31</h5><br/>
                     사내 컨테이너 플랫폼인 Viola Service Mesh(Istio)<br/>
                     Backend(Spring Boot) Gateway Park 개발 <br/>
                     Istio 모니터링 Kiali Embed 구현
@@ -406,7 +435,7 @@
                 </li>
                 <li>
                     <h5>Maestro Nutanix CMP</h5><br/>
-                    <h5>2023.07.09 ~ </h5><br/>
+                    <h5>2023.07.09 ~ 2023.09.15 </h5><br/>
                     Nutanix - 사내 Cloud 종합 플랫폼 연동 Api,App 개발 <br/>
                     Spring-Boot를 통한 Api 개발, Vue3을 이용한 App 개발
                 </li>
