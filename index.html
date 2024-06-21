@@ -40,8 +40,6 @@
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
-					<li class="nav-item"><a href="#license-section" class="nav-link"><span>License</span></a></li>
-					<li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
 					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ul>
@@ -79,7 +77,7 @@
 					<div class="img-about img d-flex align-items-stretch">
 						<div class="overlay"></div>
 						<div class="img d-flex align-self-stretch align-items-center"
-							style="background-image:url(images/about.jpg);">
+							style="background-image:url(images/profile_image.jpg);">
 						</div>
 					</div>
 				</div>
@@ -200,9 +198,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-md-9" id="license-section">
 					<div id="page-2" class="page one">
 						<h2 class="heading">License & activities</h2>
 						<div class="resume-wrap d-flex ftco-animate">
@@ -240,8 +236,18 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
+								<span class="date">2024.05.22</span>
+								<h2>NCA: NAVER CLOUD PLATFORM Certified Associate</h2>
+								<span class="position">NAVER</span>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
 								<span class="date">2024.03.27</span>
-								<h2>CKA</h2>
+								<h2>CKA: Certified Kubernetes Administrator</h2>
 								<span class="position">The Linux Foundation</span>
 							</div>
 						</div>
@@ -250,15 +256,13 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2016.11.참18</span>
+								<span class="date">2016.11.18</span>
 								<h2>정보처리산업기사</h2>
 								<span class="position">한국산업인력공단</span>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-md-9" id="experience-section">
 					<div id="page-3" class="page two">
 						<h2 class="heading">Work Experience</h2>
 						<div class="resume-wrap d-flex ftco-animate">
@@ -275,11 +279,17 @@
 								<b class="text-primary">CMP V2 </b>
 								<div>
 									<span class="date">2019.04-2020.12</span>
-									<div> - 기존 CMP 고도화 CMP V2 프로젝트</div>
-									<div> - Container Flatform 'Viola' Service Mesh Part 개발</div>
-									<div> - 4대보험 CMP 구축</div>
-									<div> - 사내 개발환경 GitOps Pipeline 구축</div>
-									<div> - Maestro Nutanix CMP Backend,Frontend 개발</div>
+									<div> 기존 4대보험 CMP를 기준으로 MSA Architecture 형식으로 전환</div>
+									<div>  </div>
+									<div> Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입, 환경 구축</div>
+									<div> - Open Source Helm Deploy - RabbitMQ, Jenkins, Gitea, ArgoCD, Kiali(Istio), OPA Gatekeeper </div>
+									<div> - 개발환경에 맞게 Values.yaml Cumstomizing 이후 배포 </div>
+									<div> Pipeline 구축 </div>
+									<div> - Gitea, Jenkins, ArgoCD를 이용한 CI/CD Pipeline 구축 Jenkins의 MultibranchProject, Gitea Webhook을 연동 </div>
+									<div> - Application을 Helm Chart화, helm Template으로 생성된 Manifests 파일을 이용해 ArgoCD가 Kubernetes 환경에 자동 배포 될 수 있도록 Pipeline 구축 </div>
+									<div> 모니터링, Kubernetes 환경 개발 </div>
+									<div> - istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속 Jaeger, Kiali를 통한 Istio 환경 모니터링을 구축 </div>
+									<div> - OPA Gatekeeper를 이용하여 개발자 에러 최소화 정책 수립, Image Tag, Namespace Istio Label 검증 </div>
 								</div>
 
 								<b class="text-primary">Container Platfomr 'Viola' Service Mesh Develop </b>
