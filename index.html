@@ -161,7 +161,6 @@
 							<li><a href="#page-2">License & activities</a></li>
 							<li><a href="#page-3">Experience</a></li>
 							<li><a href="#page-4">Skills</a></li>
-							<li><a href="#page-5">Projects</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -194,6 +193,7 @@
 							</div>
 							<div class="text pl-3">
 								<span class="date">2010-2013</span>
+								<br/>
 								<span class="position">Moonil High School</span>
 							</div>
 						</div>
@@ -279,38 +279,61 @@
 								<b class="text-primary">CMP V2 </b>
 								<div>
 									<span class="date">2019.04-2020.12</span>
-									<div> 기존 4대보험 CMP를 기준으로 MSA Architecture 형식으로 전환</div>
+									<b class="text-primary">기술 스택</b>
+									<p> Kubernetes, Helm, Jenkins, Gitea, ArgoCD, Kiali, Jaeger, OPA Gatekeeper, Istio</p>
+									<div> <b>기존 4대보험 CMP를 기준으로 MSA Architecture 형식으로 전환</b></div>
 									<br/>
-									<div> Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입, 환경 구축</div>
+									<div> <b>Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입, 환경 구축</b></div>
 									<div> - Open Source Helm Deploy - RabbitMQ, Jenkins, Gitea, ArgoCD, Kiali(Istio), OPA Gatekeeper </div>
 									<div> - 개발환경에 맞게 Values.yaml Cumstomizing 이후 배포 </div>
 									<br/>
-									<div> Pipeline 구축 </div>
+									<div> <b>Pipeline 구축 </b></div>
 									<div> - Gitea, Jenkins, ArgoCD를 이용한 CI/CD Pipeline 구축 Jenkins의 MultibranchProject, Gitea Webhook을 연동 </div>
 									<div> - Application을 Helm Chart화, helm Template으로 생성된 Manifests 파일을 이용해 ArgoCD가 Kubernetes 환경에 자동 배포 될 수 있도록 Pipeline 구축 </div>
 									<br/>
-									<div> 모니터링, Kubernetes 환경 개발 </div>
-									<div> - istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속 Jaeger, Kiali를 통한 Istio 환경 모니터링을 구축 </div>
+									<div> <b>모니터링, Kubernetes 환경 개발</b> </div>
+									<div> - istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속 </div>
+									<div> - Jaeger, Kiali를 통한 Istio 환경 모니터링을 구축 </div>
 									<div> - OPA Gatekeeper를 이용하여 개발자 에러 최소화 정책 수립, Image Tag, Namespace Istio Label 검증 </div>
 								</div>
+								<br/>
 
 								<b class="text-primary">Container Platfomr 'Viola' Service Mesh Develop </b>
 								<div>
-									<span class="date">2019.04-2020.12</span>
-									<div> - 기존 CMP 고도화 CMP V2 프로젝트</div>
-									<div> - Container Flatform 'Viola' Service Mesh Part 개발</div>
-									<div> - 4대보험 CMP 구축</div>
-									<div> - 사내 개발환경 GitOps Pipeline 구축</div>
-									<div> - Maestro Nutanix CMP Backend,Frontend 개발</div>
+									<span class="date">2024.05</span>
+									<b class="text-primary">기술 스택</b>
+									<p> Spring Boot, Istio, Kiali, OpenStack</p>
+									<div> - 개발환경 Istio 구축</div>
+									<div> - K8s API와 통신하여 Istio Gateway CRUD API 개발</div>
 								</div>
+								<br/>
+
+								<b class="text-primary">Maestro Nutanix CMP </b>
+								<div>
+									<span class="date">2023.07-2023.09</span>
+									<b class="text-primary">기술 스택</b>
+									<p> Spring Boot, Vue3, Nutanix</p>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
+								</div>
+								<br/>
 
 								<b class="text-primary">4대보험 CMP 구축 </b>
 								<div>
-									<div> - 기존 CMP 고도화 CMP V2 프로젝트</div>
-									<div> - Container Flatform 'Viola' Service Mesh Part 개발</div>
-									<div> - 4대보험 CMP 구축</div>
-									<div> - 사내 개발환경 GitOps Pipeline 구축</div>
-									<div> - Maestro Nutanix CMP Backend,Frontend 개발</div>
+									<span class="date">2023.04-2024.04</span>
+									<b class="text-primary">기술 스택</b>
+									<p> Kubernetes, OpenStack, Haproxy, MariaDB,Helm, Keycloak, Vault, NFS, Harbor</p>
+									<div> <b>Kubernetes Application 운영환경 구축</b></div>
+									<div> - Kubeadm을 이용한 Offline 환경 K8s 구축</div>
+									<div> - Harbor 구축, MariaDB 3중화 MaxScale, NFS 동적 프로비저닝 구성</div>
+									<div> - RabbitMQ, Redis, Keycloak, Vault Helm을 통한 구축</div>
+									<div> - Application Helm HPA을 이용한 Auto-Scaling 구성으로 배포</div>
+									<br/>
+									<div> <b>DR환경 구축 & 재난상황 대비 환경 구성</b></div>
+									<div> - Hypervisor Off시, Remote Image Registry가 아닌 Local에서 가져오도록 정책 변경</div>
+									<div> - Middle Ware 및 Application NodeSeletor로 적당한 Node로 분배하여 가용성 확보</div>
+									<div> - Maxscale을 Pod로 올려 구성</div>
+									<div> - 재해재난복구테스트 엔지니어 지원</div>
 								</div>
 								</p>
 							</div>
@@ -326,11 +349,21 @@
 								<span class="position">토모소프트</span>
 								<p>태권도원 영업관리 시스템 운영 및 유지관리</p>
 								<b class="text-primary">기술 스택</b>
-								<p>Docker, Spring Framework, Xplatform, Linux, Ngnix</p>
-								<b class="text-primary">주요 업무 </b>
+								<p>Docker, Spring Framework, Xplatform, Linux, Ngnix, Oracle, JPA</p>
+
+								<b class="text-primary">태권도원 영업관리시스템 운영 및 유지관리 </b>
 								<div>
-									<div> - 태권도원 영업관리시스템 운영 및 유지관리</div>
-									<div> - 태권도원 영업관리시스템 고도화 1차 용역</div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
+								</div>
+								<br/>
+
+								<b class="text-primary">태권도원 영업관리시스템 고도화 1차 용역 </b>
+								<div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
 								</div>
 							</div>
 						</div>
@@ -346,40 +379,48 @@
 								<b class="text-primary">기술 스택</b>
 								<p>Spring Framework, Java, Javascript, Jquery, Oracle</p>
 								<!-- Project -->
-								<b class="text-primary">주요 업무 </b>
+								<b class="text-primary">넷시스재팬 프로젝트 </b>
 								<div>
-									<div> - 넷시스재팬 프로젝트</div>
-									<div> - 고객관리시스템 CRM 대용량 이메일 서비스 연동</div>
-									<div> - 산하정보기술 Wings 연구, 개발 및 그룹웨어 담당</div>
-									<div> - 워커힐 POS F&B 재구축</div>
-									<div> - 승산리조트 Wings GFS PMS</div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
 								</div>
+								<br/>
 
-								<b class="text-primary">주요 업무 </b>
+								<b class="text-primary">고객관리시스템 CRM 대용량 이메일 서비스 연동 </b>
 								<div>
-									<div> - 넷시스재팬 프로젝트</div>
-									<div> - 고객관리시스템 CRM 대용량 이메일 서비스 연동</div>
-									<div> - 산하정보기술 Wings 연구, 개발 및 그룹웨어 담당</div>
-									<div> - 워커힐 POS F&B 재구축</div>
-									<div> - 승산리조트 Wings GFS PMS</div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
 								</div>
+								<br/>
 
-								<b class="text-primary">주요 업무 </b>
+								<b class="text-primary">산하정보기술 Wings 연구, 개발 및 그룹웨어 담당 </b>
 								<div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
+								</div>
+								<br/>
+
+								<b class="text-primary">워커힐 POS F&B 재구축 </b>
+								<div>
+									<span class="date">2023.07-2023.09</span>
+									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
+									<div> - Storage, Network단 Vue를 이용한 화면 개발</div>
+								</div>
+								<br/>
+
+								<b class="text-primary">승산리조트 Wings GFS PMS </b>
+								<div>
+									<span class="date">2023.07-2023.09</span>
 									<div> - 넷시스재팬 프로젝트</div>
-									<div> - 고객관리시스템 CRM 대용량 이메일 서비스 연동</div>
-									<div> - 산하정보기술 Wings 연구, 개발 및 그룹웨어 담당</div>
-									<div> - 워커힐 POS F&B 재구축</div>
-									<div> - 승산리조트 Wings GFS PMS</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div id="page-4" class="page three">
 						<h2 class="heading">Skills</h2>
-					</div>
-					<div id="page-5" class="page four">
-						<h2 class="heading">Project</h2>
 					</div>
 				</div>
 			</div>
