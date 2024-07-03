@@ -298,7 +298,7 @@
 									<div> - Gitea, Jenkins, ArgoCD를 이용한 CI/CD Pipeline 구축  </div>
 									<div> - Jenkins의 MultibranchProject, Gitea Webhook을 연동</div>
 									<div> - Application을 Helm Chart화 </div>
-									<div> - helm으로 생성된 Manifests 파일을 이용해 ArgoCD가 Kubernetes 환경에 자동 배포 될 수 있도록 Pipeline구축 </div>
+									<div> - helm으로 생성된 Manifests 파일을 이용해 ArgoCD가 Kubernetes에 자동 배포 될 수 있도록 Pipeline구축 </div>
 									<br/>
 									<div> <b>모니터링, Kubernetes 환경 개발</b> </div>
 									<div> - istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속 </div>
@@ -344,7 +344,8 @@
 									<div> - Application Helm HPA을 이용한 Auto-Scaling 구성으로 배포</div>
 									<br/>
 									<div> <b>DR환경 구축 & 재난상황 대비 환경 구성</b></div>
-									<div> - Hypervisor Off시, Remote Image Registry가 아닌 Local에서 가져오도록 정책 변경</div>
+									<div> - Hypervisor Off시, Remote Image Registry가 아닌 Local에서 가져오도록 ImagePolicy 수정</div>
+									<div> - Node Selector, Affinity를 이용한 Hypervisor당 Application 분기 처리</div>
 									<div> - Middle Ware 및 Application NodeSeletor로 적당한 Node로 분배하여 가용성 확보</div>
 									<div> - Maxscale을 Pod로 올려 구성</div>
 									<div> - 재해재난복구테스트 엔지니어 지원</div>
