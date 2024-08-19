@@ -297,9 +297,10 @@
 									<div> <b>사내 개발환경 구축, 요구사항 분석&설계 및 GPU Cluster Scheduler 연동 개발</b></div>
 									<br/>
 									<div> <b>사내 개발환경 구축</b></div>
-									<div> - Open Source Helm Deploy - RabbitMQ, Redis, Vault, Jenkins, Gitlab, ArgoCD, Cert-Manager </div
-									<div> -
-									<div> - 개발환경에 맞게 Values.yaml Cumstomizing 이후 배포 </div>
+									<div> - Open Source Helm Deploy - RabbitMQ, Redis, Vault, Jenkins, Gitlab, ArgoCD, Cert-Manager </div>
+									<div> - Ingress - Kong  </div>
+									<div> - 개발환경에 맞게 CMP Portal Helm Chart Cumstomizing 이후 배포 </div>
+									<div> - GitOps Pipeline 구축 </div>
 									<br/>
 									<div> <b>GPU Cluster 연동 및 프로젝트 분석, 설계</b></div>
 									<div> - 기존 Openstack Provider 연동 프로세스 분석 </div>
@@ -612,7 +613,8 @@
 				<div class="col-md-12 heading-section text-center ftco-animate" id="project-section">
 					<h1 class="big big-2">Projects</h1>
 					<h2 id="side-projects-section" class="mb-4">Side Projects</h2>
-					<p>궁금한 것은 만들어보려하는 경향이 있습니다.</p>
+					<p> 작지만 의미 있는 도전들을 통해 경험을 쌓고, 그 과정에서 스스로의 역량을 끊임없이 발전시키고자 합니다. </p>
+					<p>	경험을 통해 성장하는 힘을 믿고, 매 순간 최선을 다하겠습니다.</p>
 				</div>
 			</div>
 			<div class="row no-gutters">
@@ -621,28 +623,28 @@
 						style="background-image: url(images/side-project-1.png);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/yjOps-Operator-9a6937eeb8a2470da403c14c162f8e4a"> yjOps - Jenkins,Gitlab Install Operator 만들기</a></h3>
+							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/yjOps-Operator-9a6937eeb8a2470da403c14c162f8e4a"> yjOps - Jenkins,Gitlab Install Operator</a></h3>
 							<span>Java fabric8 SDK를 이용하여 간단한 Operator를 만들어보았습니다.</span>
 						</div>
 					</div>
 				</div>
+<!--				<div class="col-md-4">-->
+<!--					<div class="project img ftco-animate d-flex justify-content-center align-items-center"-->
+<!--						 style="background-image: url(images/work-3.jpg);">-->
+<!--						<div class="overlay"></div>-->
+<!--						<div class="text text-center p-4">-->
+<!--							<h3><a target="_blank" href="#">Branding &amp; Illustration Design</a></h3>-->
+<!--							<span>Web Design</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 				<div class="col-md-4">
 					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						 style="background-image: url(images/work-3.jpg);">
+						style="background-image: url(images/side-project-3.png);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a target="_blank" href="#">Branding &amp; Illustration Design</a></h3>
-							<span>Web Design</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/work-2.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a target="_blank" href="#"> Github Follow Tracker</a></h3>
-							<span>Github API를 이용한 Follow Management (Frontend 개발진행중)</span>
+							<h3><a target="_blank" href="https://github.com/syyjbhjh3/github-folow"> Github Follow Tracker</a></h3>
+							<span>Github API를 이용한 Follow Management(Frontend 개발진행중)</span>
 						</div>
 					</div>
 				</div>
@@ -656,27 +658,20 @@
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Blog</h1>
 					<h2 class="mb-4">My Blog</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+					<p>Blog처럼 사용하고 있는 제 개인 노션입니다.
+					</p>
 				</div>
 			</div>
 			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4" class="block-20" style="background-image: url('images/image_1.jpg');">
-						</a>
-						<div class="text mt-3 d-block">
-							<h3 class="heading"><a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4">Why Lead Generation is Key for Business Growth</a>
-							</h3>
-<!--							<div class="d-flex align-items-center mb-3 meta">-->
-<!--								<p class="mb-0">-->
-<!--									<span class="mr-2">Sept. 12, 2019</span>-->
-<!--									<a href="#" class="mr-2">Admin</a>-->
-<!--									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>-->
-<!--								</p>-->
-<!--							</div>-->
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
+				<div class="blog-entry justify-content-end">
+					<a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4" class="block-20" style="background-image: url('images/image_1.jpg'); width: 1150px;">
+					</a>
+					<div class="text mt-3 d-block">
+						<h3 class="heading"><a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4">Business Growth Diary</a>
+						</h3>
+						<p> 처음에는 문제를 해결할 때 같은 고생을 반복하지 않기 위해, 인수인계를 원활히 하기 위해, 그리고 Commit Message를 되돌아보지 않기 위해 작성하기 시작했습니다. </p>
+						<p> 그런데 이제는 제가 걸어온 길을 보여주는 성장의 일기가 되어가고 있습니다.</p>
+						<p> 아직은 다소 난잡하게 느껴지지만, 그 안에 담긴 제 고민과 배움의 흔적들이 소중하게 자리하고 있습니다. 앞으로도 꾸준히 개선해 나갈 계획입니다.</p>
 					</div>
 				</div>
 			</div>
