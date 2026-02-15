@@ -215,6 +215,28 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
+								<span class="date">2026.01.13</span>
+								<h2>KCNA: Kubernetes and Cloud Native Associate</h2>
+								<span class="position">The Linux Foundation</span>
+								<div>LF-0f84vzpyhd</div>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2025.12.27</span>
+								<h2>CKAD: Certified Kubernetes Application Developer</h2>
+								<span class="position">The Linux Foundation</span>
+								<div>LF-i8gpv4cg0x</div>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
 								<span class="date">2024.06.21</span>
 								<h2>SQLD</h2>
 								<span class="position">한국데이터산업진흥원</span>
@@ -292,99 +314,50 @@
 								<div>
 									<div><b>2025.01 ~</b></div>
 									<br/>
-									<div><b>Situation</b> </div>
-									<div>
-										Viola PaaS는 K8S기반 PaaS 솔루션으로 컨테이너 관리, Cluster Provisioning 등의 기능을 가진 솔루션
-										Kubernetes as Service를 목표로 독립적 제품으로써 개발 진행중
-									</div>
+									<div><b>기술 스택</b> </div>
+									<p> SpringBoot, Pulumi(IaC), Fabric(Kubernetes Client), Kubespray, Ansible, HAProxy, Openstack </p>
+									<div> <b>Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입, 환경 구축</b></div>
+									<div> <b></b>GitOps 기반 개발 환경 자동화 및 No-Code Observability 체계 구축</b></div>
+									<div> - ArgoCD App of Apps 및 Helm 표준화를 통해 기존 환경과 동일한 규격의 독립적 개발(Alpha) 환경 구축</div>
+									<div> - ImageUpdater를 도입하여 원본 환경의 이미지 태그를 실시간 추적하여 동기화하는 Pull형 CD 파이프라인 구현</div>
+									<div> - Beyla기반의 No-Code 관측성 체계를 구축하여 별도의 소스코드 수정 없는 분산 추적 및 지표 수집 환경 확보</div>
+									<div> - Tempo/Loki/Promtail 스택 연동으로 로그와 트레이스가 연결된 통합 분석 환경을 제공하여 RCA 시간 단축</div>
+									<div> - Init Container를 활용한 런타임 Agent(OTel, JMX) 동적 주입 아키텍처 설계로 제품 경량화 및 납품 플랫폼의 독립성 강화</div>
 									<br/>
-									<div><b>Task</b></div>
-										<div>Cluster Node Instance Hot Add 기능 추가</div>
-										<div>Pulumi IaC + Kubespray를 통한 Viola Cluster-API Module 개발</div>
+
+									<div> <b>분산 환경에서의 트랜잭션 추적성 확보를 위한 Micrometer 기반 통합 로깅 아키텍처 설계 및 구축</b></div>
+									<div> - 비동기 스레드 풀 환경에서도 Trace ID가 유실되지 않도록 데코레이터 패턴 적용</div>
+									<div> - Pulumi Java SDK 기반 고정 스레드 풀 환경의 로깅 컨텍스트 전파 최적화</div>
+									<div> - 수동 Bean 설정 방식의 Feign Client 구조 내에서 MDC가 강제 전파되도록 설정 보완</div>
+									<div> - Filter(HTTP 요청/응답), AOP(Repository 레이어)를 활용하여 사용자 요청부터 DB 접근까지의 전 과정을 가시화</div>
+									<div> - Core 모듈과 Viola-Cluster-API 모듈에 우선 적용하여, 복잡한 클러스터 프로비저닝 과정에서의 장애 추적 시간(MTTR) 대폭 단축</div>
 									<br/>
-									<div><b>Action</b></div>
-										<b>1. Hot Add 기능 추가</b><br/>
-										<ul>
-											<li><b>문제:</b> Node Instance Scale Up/Down시 Node 재기동이 필요</li>
-											<li><b>조치:</b> Contrabass와 연동하여 무중단 Resource 동적 확장 기능 추가</li>
-											<li><b>결과:</b> 재기동 없이 즉시 반영 가능해져 운영 안정성 향상</li>
-										</ul>
-										<b>2. Pulumi IaC + Kubespray Cluster Provisining</b><br/>
-										<ul>
-											<li><b>문제:</b> 기존 Cluster-Api는 Resource Option의 제약이 있어 필요시 수동 수정 </li>
-											<li><b>조치:</b> 클러스터 배포 시 수동 수정 없이 원하는 스펙으로 자동 생성 가능하도록 개선 </li>
-											<li><b>결과:</b> Kubernetes 클러스터 운영 편의성 향상 </li>
-										</ul>
-										<br/>
-										<div><b>Result</b></div>
-										<div>
-											<ul>
-												<li>Hot Add 기능 적용: 노드 리소스 추가 시 재기동 없이 즉시 반영 가능해져 운영 안정성 향상</li>
-												<li>Kubernetes 클러스터 배포 자동화: Pulumi IaC와 Kubespray 연동으로 수동 수정 최소화</li>
-												<li>운영 효율성 향상: Cluster-API 확장으로 다양한 인프라 환경 지원 가능, 유지보수 편의성 증가</li>
-											</ul>
-										</div>
+
+									<div> <b>Pulumi(IaC) 기반 차세대 클러스터 자동화 모듈 개발</b></div>
+									<div> - 기존 Cluster-API의 운영 복잡성과 한계를 극복하고 안정적인 클러스터 프로비저닝 환경을 구축</div>
+									<div> - Kubespray 실행 구조를 Kubernetes Job 기반으로 재설계하여 클러스터 배포 시간 25% 단축 및 초기 설정 오류 40% 감소</div>
+									<div> - Pulumi Java SDK 초기 버전 단계에서 플랫폼 확장성을 고려한 모듈 아키텍처 자체 설계</div>
+									<div> - 오프라인 환경 완벽 지원을 위한 Nexus 중앙 리포지토리 및 자체 OS 이미지(QCOW2) 빌드 시스템 구축</div>
+									<div> - 기존 Octavia LB를 대체하는 HAProxy Mode 자체 개발로 외부 의존성 제거 및 성능 향상</div>
+									<div> - Ansible Callback 기반 데이터 수집으로 장애 발생 시 근본 원인 분석(RCA) 용이성 증대</div>
 									<br/>
+									<div> <b>Kubernetes 노드 무중단 리소스 확장(Hot-Add) 기능 개발</b></div>
+									<div> - 서비스 중단 없는 K8s 노드 리소스 확장</div>
+									<div> - 프로비저닝 통합 모니터링 환경 구축</div>
+									<div> - 클러스터 생성 시점부터 완성형 모니터링 스택을 통합 제공하여 운영 편의성을 극대화</div>
+									<div> - Kubernetes Downward API를 활용하여 고질적인 Loki Ring 연결 불안정성 문제 해결 및 데이터 수집 안정성 확보</div>
+									<div> - Ansible DNS 정보 사전 해석 로직 추가로 동적 환경에서 Loki Gateway 서비스 탐색 실패 문제 해결</div>
 								</div>
+								<br/>
+
 								<b class="text-primary">HanaCloudia 2차 고도화 </b>
 								<div>
 									<div><b>2024.07 ~ 2024.12</b></div>
 									<br/>
-									<div><b>Situation</b> </div>
-									<div>
-										CMP(Cloud Management Platform)는 OpenStack 기반 멀티 클러스터 환경에서 PaaS 환경을 제공하는 플랫폼으로, 사용자 포탈과 관리자 콘솔로 구성
-										기존 시스템은 Vault, RabbitMQ, Redis 등 다양한 미들웨어와 API/APP 모듈로 운영 중이며, 2차 고도화 프로젝트로 GPU 클러스터 연동과 데이터 수집 및 운영 최적화 작업 진행
-									</div>
-									<br/>
-									<div><b>Task</b></div>
-										<div>GPU 클러스터 연동, OpenStack 및 NetApp, Hypervisior 데이터 일일 수집 기능 구현</div>
-										<div>운영 환경 문제를 식별하고 개선안 제안</div>
-									<br/>
-									<div><b>Action</b></div>
-									<div>
-										<b>1. GPU 클러스터 연동</b><br/>
-										<ul>
-											<li><b>문제:</b> GPU 플랫폼 API 오류로 인해 일일 데이터 수집이 종종 실패</li>
-											<li><b>조치:</b> API 요청 시 특정 날짜를 재시도할 수 있는 Retryable API를 개발하여 복구 가능성을 높임</li>
-											<li><b>결과:</b> GPU 사용량 데이터 수집 실패율 감소 및 장애 복구 속도 향상</li>
-										</ul>
-										<b>2. OpenStack 하이퍼바이저 데이터 수집</b><br/>
-										<ul>
-											<li><b>문제:</b> 기존 배치 로직이 비효율적이고 데이터 누락 가능성 존재</li>
-											<li><b>조치:</b> CronJob 로직을 재설계해 전일 데이터 삭제 및 월말 데이터 적재 로직 구현</li>
-											<li><b>결과:</b> 일일 데이터 누락 문제 해결 및 데이터 적재 신뢰성 향상</li>
-										</ul>
-										<b>3. NetApp 스토리지 연동</b><br/>
-										<ul>
-											<li><b>문제:</b> 다수의 스토리지 API 통신 중 하나라도 실패하면 데이터 전체가 저장되지 않음</li>
-											<li><b>조치:</b> 병렬 Stream 방식으로 데이터 수집 로직을 변경해 대량 처리 성능 및 실패 내성을 강화</li>
-											<li><b>결과:</b> 처리 속도 50% 향상 및 부분 실패 시에도 안정적으로 데이터 저장 가능</li>
-										</ul>
-										<b>4. 운영 환경 문제 해결</b><br/>
-										<ul>
-											<li><b>문제:</b> 고객사 외부 API 테스트가 불가능해 개발 및 검증에 어려움 발생</li>
-											<li><b>조치:</b> WireMock Helm을 K8S 환경에 배포하여 API Mock 테스트 환경 제공</li>
-											<li><b>결과:</b> API 테스트 효율성 증가 및 개발 시간 단축</li>
-											<br/>
-											<li><b>문제:</b> 사용자 포탈에서 모듈 호출이 빈번했으나 호출 간 트러블슈팅 어려움</li>
-											<li><b>조치:</b> Micrometer와 Grafana를 활용한 분산 추적 추가를 제안</li>
-											<li><b>결과:</b> 모듈 간 호출 문제를 신속히 식별 및 해결 가능</li>
-											<br/>
-											<li><b>문제:</b> Harbor에 과도한 이미지 적재로 스토리지 부족 문제 발생</li>
-											<li><b>조치:</b> Harbor API를 활용해 이미지 정리와 GC 스케줄링을 자동화</li>
-											<li><b>결과:</b> 서버 용량 확보 및 Harbor 관리 효율성 향상</li>
-										</ul>
-									</div>
-									<br/>
-									<div><b>Result</b></div>
-									<div>
-										<ul>
-											<li>GPU 클러스터 연동: GPU 계약 및 사용량 데이터 안정적 연동, 장애 복구 속도 단축</li>
-											<li>OpenStack 및 NetApp 데이터 수집: 병렬 처리 도입으로 성능 50% 향상 및 데이터 누락 문제 해결</li>
-											<li>개발 환경 개선: Mock 테스트 환경 도입, 분산 추적 제안으로 개발 효율성 향상</li>
-											<li>Harbor 이미지 관리 자동화: 서버 용량 문제 해결 및 관리 효율성 향상</li>
-										</ul>
-									</div>
+									<div> <b>GPU 클러스터 연동: Retryable API 설계로 수집 실패율 감소 </b></div>
+									<div> - NetApp 스토리지 연동: 병렬 Stream 방식으로 성능 50% 향상 </div>
+									<div> - OpenStack/Hypervisor/NetApp 일일 수집 로직 개선 및 CronJob 리팩토링 </div>
+									<div> - WireMock + Helm 기반 Mock 테스트 환경 구축, Harbor GC 자동화 </div>
 								</div>
 								<br/>
 
@@ -704,7 +677,7 @@
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/105daaf65d1280498847c9d22bf8c311?pvs=4"> Violin - K8S Cluster Management</a></h3>
-							<span>(진행중) Multi K8S Cluster Management Platform</span>
+							<span>Multi K8S Cluster Management Platform</span>
 						</div>
 					</div>
 				</div>
@@ -733,8 +706,8 @@
 						 style="background-image: url(images/side-project-2.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/GoCD-Pipeline-a790433010f44f67ae6c2d08da239783?pvs=4">(진행중)GoCD로 만드는 Gitops </a></h3>
-							<span>(진행중) 내멋대로 GoCD로 Gitops 구현해보기</span>
+							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/GoCD-Pipeline-a790433010f44f67ae6c2d08da239783?pvs=4">GoCD로 만드는 Gitops </a></h3>
+							<span>내멋대로 GoCD로 Gitops 구현해보기</span>
 						</div>
 					</div>
 				</div>
