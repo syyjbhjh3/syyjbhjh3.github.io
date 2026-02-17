@@ -22,6 +22,24 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.viola-context {
+			margin: 8px 0;
+			padding: 10px 14px;
+			background: #f7f8fa;
+			border-left: 3px solid #6c757d;
+			border-radius: 6px;
+			color: #3f3f46;
+			line-height: 1.6;
+		}
+
+		.why-line {
+			margin-top: 6px;
+			color: #5f6368;
+			font-size: 0.95rem;
+			font-weight: 500;
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -311,6 +329,10 @@
 								<span class="position">오케스트로</span>
 								<br/>
 								<b class="text-primary">Viola PaaS Product Develop </b>
+								<div class="viola-context">Viola는 고객사에 제공하는 Kubernetes as a Platform으로, 클러스터 프로비저닝·배포·관측을 통합 제공합니다.</div>
+								<br/>
+								<div><b>Role:</b> Backend/DevOps Engineer (IaC 모듈 설계, GitOps 파이프라인 구축, 관측성 아키텍처 구현)</div>
+								<br/>
 								<div>
 									<div><b>2025.01 ~</b></div>
 									<br/>
@@ -330,8 +352,8 @@
 											<img src="images/architecture/gitops-architecture.png" alt="GitOps 및 Istio 아키텍처 다이어그램" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
 										</div>
 									</div>
-									<div> - 개발팀이 인프라 제어권을 직접 확보하기 위해 Dev-Alpha Clone 환경을 구축</div>
-									<div> - 자체 모니터링 체계와 SLI 정의를 선제적으로 검증하기 위한 개발/검증 기반으로 활용</div>
+									<div class="why-line"> - Why: 개발팀의 인프라 제어권 확보와 자체 모니터링/SLI 선제 검증을 위해 Dev-Alpha Clone 환경을 구축</div>
+									<div> - 목표: 운영 반영 전, 독립적인 개발/검증 루프를 통해 배포 안정성과 관측성 체계를 내재화</div>
 									<div> - ArgoCD App of Apps 및 Helm 표준화를 통해 기존 환경과 동일한 규격의 독립적 개발(Alpha) 환경 구축</div>
 									<div> - ImageUpdater를 도입하여 원본 환경의 이미지 태그를 실시간 추적하여 동기화하는 Pull형 CD 파이프라인 구현</div>
 									<div> - Beyla 기반의 No-Code 관측성 체계를 구축하여 별도의 소스코드 수정 없는 분산 추적 및 지표 수집 환경 확보</div>
@@ -345,6 +367,7 @@
 											<img src="images/architecture/logging-architecture.png" alt="Micrometer logging architecture diagram" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
 										</div>
 									</div>
+									<div class="why-line"> - Why: 분산/비동기 처리 구간의 요청 추적성을 확보해 장애 원인 파악 시간을 단축하기 위해 구축</div>
 									<div> - 비동기 스레드 풀 환경에서도 Trace ID가 유실되지 않도록 데코레이터 패턴 적용</div>
 									<div> - Pulumi Java SDK 기반 고정 스레드 풀 환경의 로깅 컨텍스트 전파 최적화</div>
 									<div> - 수동 Bean 설정 방식의 Feign Client 구조 내에서 MDC가 강제 전파되도록 설정 보완</div>
@@ -361,6 +384,7 @@
 											<img src="images/architecture/pulumi-architecture.png" alt="Pulumi cluster automation architecture diagram" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
 										</div>
 									</div>
+									<div class="why-line"> - Why: Cluster-API 기반 운영 복잡도와 제약을 줄이고, 고객 환경별 확장 가능한 표준 프로비저닝 체계를 만들기 위해 개발</div>
 									<div> - 기존 Cluster-API의 운영 복잡성과 한계를 극복하고 안정적인 클러스터 프로비저닝 환경을 구축</div>
 									<div> - Kubespray 실행 구조를 K8S Job 기반으로 재설계하여 클러스터 배포 시간 25% 단축 및 초기 설정 오류 40% 감소</div>
 									<div> - Pulumi Java SDK 초기 버전 단계에서 플랫폼 확장성을 고려한 모듈 아키텍처 자체 설계</div>
@@ -369,6 +393,7 @@
 									<div> - Ansible Callback 기반 데이터 수집으로 장애 발생 시 근본 원인 분석(RCA) 용이성 증대</div>
 									<br/>
 									<div> <b>Kubernetes 노드 무중단 리소스 확장(Hot-Add) 기능 개발</b></div>
+									<div class="why-line"> - Why: 서비스 중단 없이 노드 리소스를 확장해 운영 연속성을 보장하기 위해 개발</div>
 									<div> - 서비스 중단 없는 K8s 노드 리소스 확장</div>
 									<div> - 프로비저닝 통합 모니터링 환경 구축</div>
 									<div> - 클러스터 생성 시점부터 완성형 모니터링 스택을 통합 제공하여 운영 편의성을 극대화</div>
