@@ -1,916 +1,789 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="ko" class="scroll-smooth">
 
 <head>
-	<title>백엔드 엔지니어, 데브옵스 엔지니어 박영준</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>백엔드 엔지니어, 데브옵스 엔지니어 박영준</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3e64ff',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
 
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<link rel="stylesheet" href="css/aos.css">
-
-	<link rel="stylesheet" href="css/ionicons.min.css">
-
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
-	<style>
-		.viola-context {
-			margin: 8px 0;
-			padding: 10px 14px;
-			background: #f7f8fa;
-			border-left: 3px solid #6c757d;
-			border-radius: 6px;
-			color: #3f3f46;
-			line-height: 1.6;
-		}
-
-		.why-line {
-			margin-top: 6px;
-			color: #5f6368;
-			font-size: 0.95rem;
-			font-weight: 500;
-		}
-	</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .viola-context {
+            margin: 8px 0;
+            padding: 10px 14px;
+            background: #f7f8fa;
+            border-left: 3px solid #6c757d;
+            border-radius: 6px;
+            color: #3f3f46;
+            line-height: 1.6;
+        }
+        .why-line {
+            margin-top: 6px;
+            color: #5f6368;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+    </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body class="bg-white text-gray-800">
 
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a id="brand-link" class="text-2xl font-bold text-white tracking-widest uppercase transition-colors" href="index.html">
+                <span class="text-primary">P</span>arkYoungJun
+            </a>
 
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><span>P</span>arkYoungJun</a>
-			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
+            <div id="desktop-nav-links" class="hidden md:flex space-x-8">
+                <a href="#home-section" class="text-white hover:text-primary transition-colors">Home</a>
+                <a href="#about-section" class="text-white hover:text-primary transition-colors">About</a>
+                <a href="#resume-section" class="text-white hover:text-primary transition-colors">Resume</a>
+                <a href="#project-section" class="text-white hover:text-primary transition-colors">Project</a>
+                <a href="#blog-section" class="text-white hover:text-primary transition-colors">Blog</a>
+                <a href="#contact-section" class="text-white hover:text-primary transition-colors">Contact</a>
+            </div>
 
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#education-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Project</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<section class="hero-wrap js-fullheight">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-					<div class="text text-center">
-						<span class="subheading">Hey! I am</span>
-						<h1>박영준</h1>
-						<h2>I'm a
-							<span class="txt-rotate" data-period="500"
-								data-rotate='[ "Backend Engineer", "DevOps Engineer" ]'></span>
-						</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<div class="mouse">
-			<a href="#" class="mouse-icon">
-				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-			</a>
-		</div>
-	</section>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <span class="icon-menu text-2xl"></span>
+            </button>
+        </div>
 
-	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-		<div class="container">
-			<div class="row d-flex no-gutters">
-				<div class="col-md-6 col-lg-6 d-flex">
-					<div class="img-about img d-flex align-items-stretch">
-						<div class="overlay"></div>
-						<div class="img d-flex align-self-stretch align-items-center"
-							style="background-image:url(images/profile_image.jpg);">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
-					<div class="row justify-content-start pb-3">
-						<div class="col-md-12 heading-section ftco-animate">
-							<h1 class="big">About</h1>
-							<h2 class="mb-4">About Me</h2>
-							<p><b>'경험'</b>으로 성장하는 <br/> Backend Engineer, Devops Engineer 입니다.</p>
-							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Name:</span> <span>박영준</span></li>
-								<li class="d-flex"><span>Address:</span> <span>서울시 금천구 독산동</span></li>
-								<li class="d-flex"><span>Email:</span> <span>syyjbhjh7@naver.com</span></li>
-								<li class="d-flex"><span>Hobby: </span> <span>Running</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="counter-wrap ftco-animate d-flex mt-md-3">
-						<div class="text">
-							<p class="mb-4">
-								<span class="number" data-number="12">0</span>
-								<span>Project complete</span>
-							</p>
-							<p>
-								<a target="_blank"
-									href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link"
-									class="btn btn-primary py-3 px-3">이력서 다운받기</a>
-								<a target="_blank"
-								   href="https://github.com/syyjbhjh3"
-								   class="btn btn-primary py-3 px-3">GitHub</a>
-								<a target="_blank"
-								   href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=43"
-								   class="btn btn-primary py-3 px-3">Notion</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 absolute top-full left-0 w-full shadow-lg border-t border-gray-100">
+            <div class="flex flex-col p-6 space-y-4 text-center">
+                <a href="#home-section" class="hover:text-primary transition-colors">Home</a>
+                <a href="#about-section" class="hover:text-primary transition-colors">About</a>
+                <a href="#resume-section" class="hover:text-primary transition-colors">Resume</a>
+                <a href="#project-section" class="hover:text-primary transition-colors">Project</a>
+                <a href="#blog-section" class="hover:text-primary transition-colors">Blog</a>
+                <a href="#contact-section" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-	<section class="ftco-section ftco-no-pb ftco-counter img" id="section-counter">
-		<div class="container-fluid px-md-5">
-			<div class="row d-md-flex align-items-center">
-<!--				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">-->
-<!--					<div class="block-18 shadow">-->
-<!--						<div class="text">-->
-<!--							<strong class="number" data-number="5">0</strong>-->
-<!--							<span>걸어온 연수</span>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number" data-number="12">0</strong>
-							<span>Complete Projects</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number" data-number="150">0</strong>
-							<span>Happy Customers</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number" data-number="1200">0</strong>
-							<span>Cups of coffee</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Hero Section -->
+    <section id="home-section" class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/bg_1.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
 
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="text-primary uppercase tracking-widest font-semibold mb-4 block">Hey! I am</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">박영준</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-300 font-light">
+                I'm a <span id="typing-text" class="text-white font-semibold underline decoration-primary">Backend Engineer</span>
+            </h2>
+        </div>
 
-	<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<nav id="navi">
-						<ul>
-							<li><a href="#page-1">Education</a></li>
-							<li><a href="#page-2">License & activities</a></li>
-							<li><a href="#page-3">Work Experience</a></li>
-							<li><a href="#page-4">Skills</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-md-9" id="education-section">
-					<div id="page-1" class="page one">
-						<h2 class="heading">Education</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2018-2020</span>
-								<h2>소프트웨어공학, 편입</h2>
-								<span class="position">Korea Cyber Univercity</span>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2013-2017</span>
-								<h2>정보통신학과</h2>
-								<span class="position">Inha Technical College</span>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2010-2013</span>
-								<br/>
-								<span class="position">Moonil High School</span>
-							</div>
-						</div>
-					</div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <a href="#about-section">
+                <span class="icon-arrow-down text-3xl"></span>
+            </a>
+        </div>
+    </section>
 
-					<div id="page-2" class="page one">
-						<h2 class="heading">License & activities</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2026.01.13</span>
-								<h2>KCNA: Kubernetes and Cloud Native Associate</h2>
-								<span class="position">The Linux Foundation</span>
-								<div>LF-0f84vzpyhd</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2025.12.27</span>
-								<h2>CKAD: Certified Kubernetes Application Developer</h2>
-								<span class="position">The Linux Foundation</span>
-								<div>LF-i8gpv4cg0x</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2024.06.21</span>
-								<h2>SQLD</h2>
-								<span class="position">한국데이터산업진흥원</span>
-								<div>SQLD-053008011</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2024.06.18</span>
-								<h2>정보처리기사</h2>
-								<span class="position">한국산업인력공단</span>
-								<div>24201071286D</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2024.05.22</span>
-								<h2>NCA: NAVER CLOUD PLATFORM Certified Associate</h2>
-								<span class="position">NAVER</span>
-								<div>NCP_20247529</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2024.03.27</span>
-								<h2>CKA: Certified Kubernetes Administrator</h2>
-								<span class="position">The Linux Foundation</span>
-								<div>LF-tnjsj34a44</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2016.11.18</span>
-								<h2>정보처리산업기사</h2>
-								<span class="position">한국산업인력공단</span>
-								<div></div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2017.02-2017.08</span>
-								<h2>Java/Spring Developer 양성과정</h2>
-								<span class="position">ICIA 교육원</span>
-							</div>
-						</div>
-					</div>
+    <!-- About Section -->
+    <section id="about-section" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <img src="images/profile_image.jpg" alt="Profile Image" class="rounded-lg shadow-2xl relative z-10 w-full max-w-md mx-auto">
+                        <div class="absolute -top-6 -left-6 w-full h-full border-4 border-primary rounded-lg z-0 hidden md:block max-w-md mx-auto"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1 class="text-8xl font-bold text-gray-100 absolute -mt-16 -ml-8 select-none z-0 hidden lg:block">About</h1>
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold mb-6">About Me</h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            <b class="text-gray-900">'경험'</b>으로 성장하는 <br/>
+                            <span class="text-primary font-semibold">Backend Engineer, DevOps Engineer</span> 입니다.
+                        </p>
 
-					<div id="page-3" class="page two">
-						<h2 class="heading">Work Experience</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2023.03~</span>
-								<h2>Backend & DevOps Developer</h2>
-								<span class="position">오케스트로</span>
-								<br/>
-								<b class="text-primary">Viola PaaS Product Develop </b>
-								<div class="viola-context">Viola는 고객사에 제공하는 Kubernetes as a Platform으로, 클러스터 프로비저닝·배포·관측을 통합 제공합니다.</div>
-								<br/>
-								<div><b>Role:</b> Backend/DevOps Engineer (IaC 모듈 설계, GitOps 파이프라인 구축, 관측성 아키텍처 구현)</div>
-								<br/>
-								<div>
-									<div><b>2025.01 ~</b></div>
-									<br/>
-								<div><b>기술 스택</b> </div>
-									<div> <b>Backend:</b> Java, Spring Boot, Fabric8 Kubernetes Client</div>
-									<div> <b>IaC/Provisioning:</b> Pulumi (Java), Kubespray, Ansible</div>
-									<div> <b>Container/Orchestration:</b> Kubernetes, Helm, ArgoCD, ArgoCD Image Updater</div>
-									<div> <b>Observability:</b> OpenTelemetry, Beyla, Loki, Tempo, Promtail, Micrometer</div>
-									<div> <b>Platform/Infra:</b> OpenStack, HAProxy, Nexus</div>
-									<br/>
-									
-									<a href="#gitops-arch-2025" class="text-decoration-none" style="color: inherit;" data-toggle="collapse" aria-expanded="true" aria-controls="gitops-arch-2025">
-										<b>ArgoCD ImageUpdater를 이용한 Clone(Dev-Alpha) 환경 구축</b>
-									</a>
-									<div class="collapse show" id="gitops-arch-2025">
-										<div class="mt-2 mb-2">
-											<img src="images/architecture/gitops-architecture.png" alt="GitOps 및 Istio 아키텍처 다이어그램" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
-										</div>
-									</div>
-									<div class="why-line"> - Why: 개발팀의 인프라 제어권 확보와 자체 모니터링/SLI 선제 검증을 위해 Dev-Alpha Clone 환경을 구축</div>
-									<div> - 목표: 운영 반영 전, 독립적인 개발/검증 루프를 통해 배포 안정성과 관측성 체계를 내재화</div>
-									<div> - ArgoCD App of Apps 및 Helm 표준화를 통해 기존 환경과 동일한 규격의 독립적 개발(Alpha) 환경 구축</div>
-									<div> - ImageUpdater를 도입하여 원본 환경의 이미지 태그를 실시간 추적하여 동기화하는 Pull형 CD 파이프라인 구현</div>
-									<div> - Beyla 기반의 No-Code 관측성 체계를 구축하여 별도의 소스코드 수정 없는 분산 추적 및 지표 수집 환경 확보</div>
-									<br/>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex border-b border-gray-100 pb-2">
+                                <span class="w-32 font-bold text-gray-900">Name:</span>
+                                <span class="text-gray-600">박영준</span>
+                            </li>
+                            <li class="flex border-b border-gray-100 pb-2">
+                                <span class="w-32 font-bold text-gray-900">Address:</span>
+                                <span class="text-gray-600">서울시 금천구 독산동</span>
+                            </li>
+                            <li class="flex border-b border-gray-100 pb-2">
+                                <span class="w-32 font-bold text-gray-900">Email:</span>
+                                <span class="text-gray-600 underline decoration-primary">syyjbhjh7@naver.com</span>
+                            </li>
+                            <li class="flex border-b border-gray-100 pb-2">
+                                <span class="w-32 font-bold text-gray-900">Hobby:</span>
+                                <span class="text-gray-600">Running</span>
+                            </li>
+                        </ul>
 
-									<a href="#logging-arch-2025" class="text-decoration-none" style="color: inherit;" data-toggle="collapse" aria-expanded="true" aria-controls="logging-arch-2025">
-										<b>분산 환경에서의 트랜잭션 추적성 확보를 위한 Micrometer 기반 통합 로깅 아키텍처 설계 및 구축</b>
-									</a>
-									<div class="collapse show" id="logging-arch-2025">
-										<div class="mt-2 mb-2">
-											<img src="images/architecture/logging-architecture.png" alt="Micrometer logging architecture diagram" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
-										</div>
-									</div>
-									<div class="why-line"> - Why: 분산/비동기 처리 구간의 요청 추적성을 확보해 장애 원인 파악 시간을 단축하기 위해 구축</div>
-									<div> - 비동기 스레드 풀 환경에서도 Trace ID가 유실되지 않도록 데코레이터 패턴 적용</div>
-									<div> - Pulumi Java SDK 기반 고정 스레드 풀 환경의 로깅 컨텍스트 전파 최적화</div>
-									<div> - 수동 Bean 설정 방식의 Feign Client 구조 내에서 MDC가 강제 전파되도록 설정 보완</div>
-									<div> - Filter(HTTP 요청/응답), AOP(Repository 레이어)를 활용하여 사용자 요청부터 DB 접근까지의 전 과정을 가시화</div>
-									<div> - Tempo/Loki/Promtail 스택 연동으로 로그와 트레이스가 연결된 통합 분석 환경을 제공하여 RCA 시간 단축</div>
-									<div> - Init Container를 활용한 런타임 Agent(OTel, JMX) 동적 주입 설계로 제품 경량화 및 납품 플랫폼의 독립성 강화</div>
-									<br/>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors shadow-lg">이력서 다운받기</a>
+                            <a href="https://github.com/syyjbhjh3" target="_blank" rel="noopener noreferrer" class="border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all shadow-md">GitHub</a>
+                            <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=43" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-8 py-3 rounded-full hover:bg-black transition-colors shadow-lg">Notion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-									<a href="#pulumi-arch-2025" class="text-decoration-none" style="color: inherit;" data-toggle="collapse" aria-expanded="true" aria-controls="pulumi-arch-2025">
-										<b>Pulumi(IaC) 기반 클러스터 자동화 모듈 개발</b>
-									</a>
-									<div class="collapse show" id="pulumi-arch-2025">
-										<div class="mt-2 mb-2">
-											<img src="images/architecture/pulumi-architecture.png" alt="Pulumi cluster automation architecture diagram" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
-										</div>
-									</div>
-									<div class="why-line"> - Why: Cluster-API 기반 운영 복잡도와 제약을 줄이고, 고객 환경별 확장 가능한 표준 프로비저닝 체계를 만들기 위해 개발</div>
-									<div> - 기존 Cluster-API의 운영 복잡성과 한계를 극복하고 안정적인 클러스터 프로비저닝 환경을 구축</div>
-									<div> - Kubespray 실행 구조를 K8S Job 기반으로 재설계하여 클러스터 배포 시간 25% 단축 및 초기 설정 오류 40% 감소</div>
-									<div> - Pulumi Java SDK 초기 버전 단계에서 플랫폼 확장성을 고려한 모듈 아키텍처 자체 설계</div>
-									<div> - 오프라인 환경 완벽 지원을 위한 Nexus 중앙 리포지토리 및 자체 OS 이미지(QCOW2) 빌드 시스템 구축</div>
-									<div> - 기존 Octavia LB를 대체하는 HAProxy Mode 자체 개발로 외부 의존성 제거 및 성능 향상</div>
-									<div> - Ansible Callback 기반 데이터 수집으로 장애 발생 시 근본 원인 분석(RCA) 용이성 증대</div>
-									<br/>
-									<div> <b>Kubernetes 노드 무중단 리소스 확장(Hot-Add) 기능 개발</b></div>
-									<div class="why-line"> - Why: 서비스 중단 없이 노드 리소스를 확장해 운영 연속성을 보장하기 위해 개발</div>
-									<div> - 서비스 중단 없는 K8s 노드 리소스 확장</div>
-									<div> - 프로비저닝 통합 모니터링 환경 구축</div>
-									<div> - 클러스터 생성 시점부터 완성형 모니터링 스택을 통합 제공하여 운영 편의성을 극대화</div>
-									<div> - Kubernetes Downward API를 활용하여 고질적인 Loki Ring 연결 불안정성 문제 해결 및 데이터 수집 안정성 확보</div>
-									<div> - Ansible DNS 정보 사전 해석 로직 추가로 동적 환경에서 Loki Gateway 서비스 탐색 실패 문제 해결</div>
-								</div>
-								<br/>
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
+                    <strong class="text-4xl font-bold text-primary block mb-2">12</strong>
+                    <span class="text-gray-500 uppercase tracking-widest text-sm">Complete Projects</span>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
+                    <strong class="text-4xl font-bold text-primary block mb-2">150</strong>
+                    <span class="text-gray-500 uppercase tracking-widest text-sm">Happy Customers</span>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
+                    <strong class="text-4xl font-bold text-primary block mb-2">1200</strong>
+                    <span class="text-gray-500 uppercase tracking-widest text-sm">Cups of coffee</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-								<b class="text-primary">HanaCloudia 2차 고도화 </b>
-								<div>
-									<div><b>2024.07 ~ 2024.12</b></div>
-									<br/>
-									<div> <b>GPU 클러스터 연동: Retryable API 설계로 수집 실패율 감소 </b></div>
-									<div> - NetApp 스토리지 연동: 병렬 Stream 방식으로 성능 50% 향상 </div>
-									<div> - OpenStack/Hypervisor/NetApp 일일 수집 로직 개선 및 CronJob 리팩토링 </div>
-									<div> - WireMock + Helm 기반 Mock 테스트 환경 구축, Harbor GC 자동화 </div>
-								</div>
-								<br/>
+    <!-- Resume Section -->
+    <section id="resume-section" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h1 class="text-8xl font-bold text-gray-100 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Resume</h1>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">Resume</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">경험을 통한 성장의 기록입니다.</p>
+        </div>
 
-								<b class="text-primary">CMP V2 </b>
-								<div>
-									<div><b>2024.06</b></div>
-									<br/>
-									<div><b>기술 스택</b> </div>
-									<p> Kubernetes, Helm, Jenkins, Gitea, ArgoCD, Kiali, Jaeger, OPA Gatekeeper, Istio</p>
-									<div> <b>기존 4대보험 CMP를 기준으로 MSA Architecture 형식으로 전환</b></div>
-									<br/>
-									<div><b>Gitea를 이용한 GitOps Pipeline 구축 및 Istio 도입, 환경 구축</b></div>	
-									<div> - Open Source Helm Deploy - RabbitMQ, Jenkins, Gitea, ArgoCD, Kiali(Istio), OPA Gatekeeper </div>
-									<div> - 개발환경에 맞게 Values.yaml Cumstomizing 이후 배포 </div>
-									<br/>
-									<div> <b>Pipeline 구축 </b></div>
-									<div> - Gitea, Jenkins, ArgoCD를 이용한 CI/CD Pipeline 구축  </div>
-									<div> - Jenkins의 MultibranchProject, Gitea Webhook을 연동</div>
-									<div> - Application을 Helm Chart화 </div>
-									<div> - helm으로 생성된 Manifests 파일을 이용해 ArgoCD가 Kubernetes에 자동 배포 될 수 있도록 Pipeline구축 </div>
-									<br/>
-									<div> <b>모니터링, Kubernetes 환경 개발</b> </div>
-									<div> - istio IngressGateway를 이용하여 Gateway, VirtualService를 통한 외부접속 </div>
-									<div> - Jaeger, Kiali를 통한 Istio 환경 모니터링을 구축 </div>
-									<div> - OPA Gatekeeper를 이용하여 개발자 에러 최소화 정책 수립, Image Tag, Namespace Istio Label 검증 </div>
-									<div> - Istio Add On Prometeus, Grafana 연동 Application 자원 사용량 시각화 </div>
-								</div>
-								<br/>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Sidebar Nav -->
+                <div class="w-full lg:w-1/4">
+                    <nav class="sticky top-24 space-y-2">
+                        <a href="#page-1" class="block py-3 px-6 rounded-lg bg-gray-50 text-gray-700 hover:bg-primary hover:text-white transition-all font-semibold">Education</a>
+                        <a href="#page-2" class="block py-3 px-6 rounded-lg bg-gray-50 text-gray-700 hover:bg-primary hover:text-white transition-all font-semibold">License &amp; activities</a>
+                        <a href="#page-3" class="block py-3 px-6 rounded-lg bg-gray-50 text-gray-700 hover:bg-primary hover:text-white transition-all font-semibold">Work Experience</a>
+                        <a href="#page-4" class="block py-3 px-6 rounded-lg bg-gray-50 text-gray-700 hover:bg-primary hover:text-white transition-all font-semibold">Skills</a>
+                    </nav>
+                </div>
 
-								<b class="text-primary">Container Platfomr 'Viola' Service Mesh Develop </b>
-								<div>
-									<div><b>2024.05</b></div>
-									<br/>
-									<div><b>기술 스택</b> </div>
-									<p> Spring Boot, Istio, Kiali, OpenStack</p>
-									<div> - 개발환경 Istio 구축</div>
-									<div> - K8s API와 통신하여 Istio Gateway CRUD API 개발</div>
-									<div> - Envoy Sidecar 자동주입, Kiali Embed 및 Custom Graph 개발 </div>
-								</div>
-								<br/>
+                <!-- Content Area -->
+                <div class="w-full lg:w-3/4 space-y-16">
+                    <!-- Education -->
+                    <div id="page-1" class="scroll-mt-24">
+                        <h3 class="text-3xl font-bold mb-8 text-primary border-b-2 border-primary inline-block pb-2">Education</h3>
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 p-8 rounded-2xl relative border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-primary font-bold block mb-2">2018-2020</span>
+                                <h4 class="text-2xl font-bold mb-1">소프트웨어공학, 편입</h4>
+                                <span class="text-gray-500 font-medium">Korea Cyber University</span>
+                            </div>
+                            <div class="bg-gray-50 p-8 rounded-2xl relative border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-primary font-bold block mb-2">2013-2017</span>
+                                <h4 class="text-2xl font-bold mb-1">정보통신학과</h4>
+                                <span class="text-gray-500 font-medium">Inha Technical College</span>
+                            </div>
+                            <div class="bg-gray-50 p-8 rounded-2xl relative border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+                                <span class="text-primary font-bold block mb-2">2010-2013</span>
+                                <h4 class="text-2xl font-bold mb-1">Moonil High School</h4>
+                            </div>
+                        </div>
+                    </div>
 
-								<b class="text-primary">Maestro Nutanix CMP </b>
-								<div>
-									<div><b>2023.07-2023.09</b></div>
-									<br/>
-									<div><b>기술 스택</b> </div>
-									<p> Spring Boot, Vue3, Nutanix</p>
-									<div> - Nutanix API와 통신하여 Cluster, Storage, Network API 개발</div>
-									<div> - Storage, Network, Alert, Event Resource Vue를 이용한 화면 개발</div>
-								</div>
-								<br/>
+                    <!-- Licenses -->
+                    <div id="page-2" class="scroll-mt-24">
+                        <h3 class="text-3xl font-bold mb-8 text-primary border-b-2 border-primary inline-block pb-2">License &amp; activities</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2026.01.13</span>
+                                <h4 class="text-lg font-bold mt-2">KCNA: Kubernetes and Cloud Native Associate</h4>
+                                <p class="text-gray-500 text-sm mt-1">The Linux Foundation (LF-0f84vzpyhd)</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2025.12.27</span>
+                                <h4 class="text-lg font-bold mt-2">CKAD: Certified Kubernetes Application Developer</h4>
+                                <p class="text-gray-500 text-sm mt-1">The Linux Foundation (LF-i8gpv4cg0x)</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2024.06.21</span>
+                                <h4 class="text-lg font-bold mt-2">SQLD</h4>
+                                <p class="text-gray-500 text-sm mt-1">한국데이터산업진흥원 (SQLD-053008011)</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2024.06.18</span>
+                                <h4 class="text-lg font-bold mt-2">정보처리기사</h4>
+                                <p class="text-gray-500 text-sm mt-1">한국산업인력공단 (24201071286D)</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2024.05.22</span>
+                                <h4 class="text-lg font-bold mt-2">NCA: NAVER CLOUD PLATFORM Certified Associate</h4>
+                                <p class="text-gray-500 text-sm mt-1">NAVER (NCP_20247529)</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span class="text-primary font-bold text-sm">2024.03.27</span>
+                                <h4 class="text-lg font-bold mt-2">CKA: Certified Kubernetes Administrator</h4>
+                                <p class="text-gray-500 text-sm mt-1">The Linux Foundation (LF-tnjsj34a44)</p>
+                            </div>
+                        </div>
+                    </div>
 
-								<b class="text-primary">NPS 4대보험 CMP CONN </b>
-								<div>
-									<div><b>2023.04-2024.04</b></div>
-									<br/>
-									<div><b>기술 스택</b> </div>
-									<p> Kubernetes, OpenStack, Haproxy, MariaDB,Helm, Keycloak, Vault, NFS, Harbor</p>
-									<div> <b>Kubernetes Application 운영환경 구축</b></div>
-									<div> - Kubeadm을 이용한 Offline 환경 K8s 구축</div>
-									<div> - Harbor 구축, MariaDB 3중화 MaxScale, NFS 동적 프로비저닝 구성</div>
-									<div> - RabbitMQ, Redis, Keycloak, Vault Helm을 통한 구축</div>
-									<div> - Application Helm HPA을 이용한 Auto-Scaling 구성으로 배포</div>
-									<br/>
-									<div> <b>DR환경 구축 & 재난상황 대비 환경 구성</b></div>
-									<div> - Hypervisor Off시, Remote Image Registry가 아닌 Local에서 가져오도록 ImagePolicy 수정</div>
-									<div> - Node Selector, Affinity를 이용한 Hypervisor당 Application 분기 처리</div>
-									<div> - Middle Ware 및 Application NodeSeletor로 적당한 Node로 분배하여 가용성 확보</div>
-									<div> - Maxscale을 Pod로 올려 구성</div>
-									<div> - 재해재난복구테스트 엔지니어 지원</div>
-								</div>
-								</p>
-							</div>
+                    <!-- Work Experience -->
+                    <div id="page-3" class="scroll-mt-24">
+                        <h3 class="text-3xl font-bold mb-8 text-primary border-b-2 border-primary inline-block pb-2">Work Experience</h3>
 
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2019.04-2020.12</span>
-								<h2>Web Developer</h2>
-								<span class="position">토모소프트</span>
-								<p>태권도원 영업관리 시스템 운영 및 유지관리</p>
-								<b class="text-primary">기술 스택</b>
-								<p>Docker, Spring Framework, Xplatform, Linux, Ngnix, Oracle, JPA</p>
+                        <!-- Orchestra -->
+                        <div class="relative pl-8 border-l-2 border-gray-100 space-y-12">
+                            <div class="relative">
+                                <div class="absolute -left-10 top-0 w-4 h-4 bg-primary rounded-full ring-4 ring-blue-100"></div>
+                                <span class="text-primary font-bold">2023.03 - Present</span>
+                                <h4 class="text-2xl font-bold mt-2">Backend &amp; DevOps Developer</h4>
+                                <span class="text-gray-500 font-semibold block mb-4">오케스트로 (Okestro)</span>
 
-								<b class="text-primary">태권도원 영업관리시스템 운영 및 유지관리 </b>
-								<div>
-									<div><b>2020.02-2020.12</b></div>
-									<div> - 태권도원 영업 관리시스템 시스템변경으로 올 수 있는 상황을 중점으로 운영</div>
-									<div> - 숙박관리, 판촉관리 사용자 Operation 확인 후, Process 분석</div>
-									<div> - 화면단 Process 리뉴얼, 사용자 교육</div>
-								</div>
-								<br/>
+                                <div class="space-y-6 text-gray-700">
+                                    <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-400">
+                                        <h5 class="font-bold text-blue-900 mb-2">Viola PaaS Product Develop</h5>
+                                        <p class="text-sm leading-6">Viola는 고객사에 제공하는 Kubernetes as a Platform으로, 클러스터 프로비저닝·배포·관측을 통합 제공합니다. Backend/DevOps Engineer로서 IaC 모듈 설계, GitOps 파이프라인 구축, 서비스 메쉬/관측성 아키텍처 구현까지 담당했습니다.</p>
+                                    </div>
 
-								<b class="text-primary">태권도원 영업관리시스템 고도화 1차 용역 </b>
-								<div>
-									<div><b>2019.04-2019.12</b></div>
-									<div> - 태권도원 영업 관리시스템 고도화 작업 및 담당자 교육</div>
-									<div> - Docker-compose를 이용한 무중단 배포 및 서버 이중화 개선</div>
-									<div> - 현업 담당자들의 요구사항에 맞게 행사 견적 예약, 계약 프로세스 수정</div>
-									<div> - 신규 결제 수단 등록, 보고서류의 화면개발을 담당하여 수행 </div>
-								</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2017.10-2019.04</span>
-								<h2>Web Developer</h2>
-								<span class="position">산하정보기술</span>
-								<p>호텔 PMS 솔루션 'Wings' 개발 및 프로젝트 수행</p>
-								<b class="text-primary">기술 스택</b>
-								<p>Spring Framework, Java, Javascript, Jquery, Oracle, Jasper Report, SVN</p>
-								<!-- Project -->
-								<b class="text-primary">넷시스재팬 프로젝트 </b>
-								<div>
-									<div><b>2019.03-2019.04</b></div>
-									<div> - PMS 커스터마이징 및 오류 개선</div>
-									<div> - Main Dashboard, Main Widget 개발</div>
-									<div> - 일본 다테야마 호텔을 방문하여 오픈지원 및 교육</div>
-								</div>
-								<br/>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                            <strong class="text-gray-900 block mb-1">Role</strong>
+                                            IaC 모듈 설계, 클러스터 자동화, GitOps 파이프라인 구축, Observability 아키텍처 구현
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                            <strong class="text-gray-900 block mb-1">Backend</strong>
+                                            Java, Spring Boot, Fabric8 Kubernetes Client, Feign Client
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                            <strong class="text-gray-900 block mb-1">IaC / Provisioning</strong>
+                                            Pulumi (Java), Kubespray, Ansible, OpenStack, HAProxy, Nexus
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                            <strong class="text-gray-900 block mb-1">Cloud Native / Observability</strong>
+                                            Kubernetes, Helm, ArgoCD, ArgoCD Image Updater, OpenTelemetry, Beyla, Loki, Tempo, Promtail, Micrometer
+                                        </div>
+                                    </div>
 
-								<b class="text-primary">고객관리시스템 CRM 대용량 이메일 서비스 연동 </b>
-								<div>
-									<div><b>2019.01-2019.03</b></div>
-									<div> - CMR관련 화면 리뉴얼 설계 및 개발</div>
-									<div> - 대용량 이메일 전송 인터페이스 연동 및 Api 개발</div>
-								</div>
-								<br/>
+                                    <div class="space-y-4">
+                                        <div class="border border-gray-100 rounded-xl overflow-hidden">
+                                            <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="true" aria-controls="gitops-architecture-panel">
+                                                <span>ArgoCD ImageUpdater를 이용한 Clone(Dev-Alpha) 환경 구축</span>
+                                                <span class="icon-arrow-down transition-transform"></span>
+                                            </button>
+                                            <div id="gitops-architecture-panel" class="p-4 space-y-3">
+                                                <img src="images/architecture/gitops-architecture.png" class="rounded border mb-3 w-full" alt="GitOps Architecture">
+                                                <p class="text-sm italic text-gray-500">- Why: 개발팀의 인프라 제어권 확보와 자체 모니터링/SLI 선제 검증을 위해 Dev-Alpha Clone 환경을 구축</p>
+                                                <ul class="list-disc pl-5 space-y-1 text-sm leading-6">
+                                                    <li>운영 반영 전 독립적인 개발·검증 루프를 만들기 위해 기존 환경과 동일한 규격의 Alpha 환경을 설계</li>
+                                                    <li>ArgoCD App of Apps와 Helm 표준화를 통해 애플리케이션/플랫폼 구성을 일관된 방식으로 관리</li>
+                                                    <li>ImageUpdater를 도입해 원본 환경의 이미지 태그를 추적·동기화하는 Pull 기반 CD 파이프라인 구현</li>
+                                                    <li>Beyla 기반 No-Code 관측성 체계를 구축해 별도 소스 수정 없이 분산 추적 및 지표 수집 환경 확보</li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
-								<b class="text-primary">산하정보기술 Wings 연구, 개발 및 그룹웨어 담당 </b>
-								<div>
-									<div><b>2018.08-2019.01</b></div>
-									<div> - 경량화 객실 예약/운영관리 솔루션 'Wings Allegro' 개발 </div>
-									<div> - 조선호텔 PMS 오류 수정 및 개선 </div>
-									<div> - 사내 그룹웨어 담당자로 운영 및 개선</div>
-								</div>
-								<br/>
+                                        <div class="border border-gray-100 rounded-xl overflow-hidden">
+                                            <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="true" aria-controls="logging-architecture-panel">
+                                                <span>Micrometer 기반 통합 로깅 / 추적 아키텍처 설계</span>
+                                                <span class="icon-arrow-down transition-transform"></span>
+                                            </button>
+                                            <div id="logging-architecture-panel" class="p-4 space-y-3">
+                                                <img src="images/architecture/logging-architecture.png" class="rounded border mb-3 w-full" alt="Logging Architecture">
+                                                <p class="text-sm italic text-gray-500">- Why: 분산·비동기 처리 구간의 요청 추적성을 확보해 장애 원인 파악 시간을 줄이기 위해 설계</p>
+                                                <ul class="list-disc pl-5 space-y-1 text-sm leading-6">
+                                                    <li>비동기 스레드 풀 환경에서도 Trace ID가 유실되지 않도록 MDC 전파 구조와 데코레이터 패턴 적용</li>
+                                                    <li>Pulumi Java SDK 기반 고정 스레드 풀 환경에 맞춰 로깅 컨텍스트 전파 방식을 최적화</li>
+                                                    <li>Feign Client, Filter, AOP를 활용해 HTTP 요청부터 DB 접근까지의 로그 흐름을 추적 가능하게 구성</li>
+                                                    <li>Tempo / Loki / Promtail 연동으로 로그와 트레이스를 연결하여 RCA 시간을 단축</li>
+                                                    <li>Init Container 기반 런타임 Agent 주입 구조로 제품 경량화와 납품 환경 독립성을 함께 확보</li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
-								<b class="text-primary">워커힐 POS F&B 재구축 </b>
-								<div>
-									<div><b>2018.01-2018.06</b></div>
-									<div> - 서울 워커힐 호텔 POS 재구축 및 관련 Front End & Back End 구축</div>
-									<div> - POS 사용자 교육 및 교체 작업 리드</div>
-								</div>
-								<br/>
+                                        <div class="border border-gray-100 rounded-xl overflow-hidden">
+                                            <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="false" aria-controls="pulumi-architecture-panel">
+                                                <span>Pulumi(IaC) 기반 클러스터 자동화 모듈 개발</span>
+                                                <span class="icon-arrow-down transition-transform"></span>
+                                            </button>
+                                            <div id="pulumi-architecture-panel" class="p-4 space-y-3 hidden">
+                                                <img src="images/architecture/pulumi-architecture.png" class="rounded border mb-3 w-full" alt="Pulumi Architecture">
+                                                <p class="text-sm italic text-gray-500">- Why: Cluster API 기반 운영 복잡도를 낮추고, 고객 환경별로 확장 가능한 표준 프로비저닝 체계를 만들기 위해 개발</p>
+                                                <ul class="list-disc pl-5 space-y-1 text-sm leading-6">
+                                                    <li>Kubespray 실행 구조를 Kubernetes Job 기반으로 재설계하여 클러스터 배포 시간을 25% 단축</li>
+                                                    <li>Pulumi Java SDK 초기 단계에서 플랫폼 확장성을 고려한 모듈 아키텍처를 직접 설계</li>
+                                                    <li>오프라인 납품 환경 지원을 위해 Nexus 중앙 리포지토리와 QCOW2 이미지 빌드 체계를 구축</li>
+                                                    <li>Octavia Load Balancer를 대체하는 HAProxy Mode를 자체 개발해 외부 의존성을 축소</li>
+                                                    <li>Ansible Callback 기반 데이터 수집 구조를 도입해 장애 분석과 RCA 효율을 높임</li>
+                                                    <li>Kubernetes 노드 무중단 리소스 확장(Hot-Add)과 프로비저닝 통합 모니터링 환경을 구현</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
 
-								<b class="text-primary">승산리조트 Wings GFS PMS </b>
-								<div>
-									<div><b>2017.10-2018.01</b></div>
-									<div> - 승산리조트 골프, 호텔 PMS 커스터마이징 작업</div>
-									<div> - 보고서 신규 개발 ,오류 수정 및 개선</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="page-4" class="page three">
-						<h2 class="heading">Skills</h2>
-						<div class="row progress-circle mb-5">
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">Kubernetes</h2>
+                                    <div class="space-y-6">
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">HanaCloudia 2차 고도화 (2024.07 ~ 2024.12)</b>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>GPU 클러스터 연동 과정에서 Retryable API를 설계해 수집 실패 상황을 안정적으로 복구</li>
+                                                <li>NetApp 스토리지 연동 시 병렬 Stream 방식을 적용하여 처리 성능을 약 50% 향상</li>
+                                                <li>OpenStack / Hypervisor / NetApp 일일 수집 로직을 개선하고 CronJob 구조를 리팩토링</li>
+                                                <li>WireMock + Helm 기반 Mock 테스트 환경과 Harbor GC 자동화를 구성해 검증 효율 향상</li>
+                                            </ul>
+                                        </div>
 
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='55'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-												class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">55<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">CMP V2 (2024.06)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Kubernetes, Helm, Jenkins, Gitea, ArgoCD, Istio, Jaeger, Kiali, OPA Gatekeeper</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>기존 4대보험 CMP를 기준으로 MSA 아키텍처 형태의 개발/배포 구조로 재정비</li>
+                                                <li>Gitea, Jenkins, ArgoCD를 연결해 GitOps 기반 CI/CD 파이프라인을 구축</li>
+                                                <li>애플리케이션을 Helm Chart화하고 ArgoCD가 Kubernetes에 자동 배포하도록 표준화</li>
+                                                <li>Istio IngressGateway, Jaeger, Kiali, Gatekeeper를 연계해 트래픽/정책/관측 체계를 정비</li>
+                                            </ul>
+                                        </div>
 
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">Java</h2>
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">Container Platform 'Viola' Service Mesh Develop (2024.05)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Spring Boot, Istio, Kiali, OpenStack</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>개발환경용 Istio 기반 서비스 메쉬를 설계·구축</li>
+                                                <li>Kubernetes API와 연동하는 Istio Gateway CRUD API를 개발</li>
+                                                <li>Envoy Sidecar 자동주입과 Kiali Embed / Custom Graph 기능을 구현</li>
+                                            </ul>
+                                        </div>
 
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='50'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-												class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">50<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">Maestro Nutanix CMP (2023.07 ~ 2023.09)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Spring Boot, Vue3, Nutanix</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>Nutanix API와 통신하는 Cluster, Storage, Network API를 개발</li>
+                                                <li>Storage, Network, Alert, Event 리소스에 대한 운영 화면을 Vue로 구현</li>
+                                            </ul>
+                                        </div>
 
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">SQL</h2>
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">NPS 4대보험 CMP CONN (2023.04 ~ 2024.04)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Kubernetes, OpenStack, HAProxy, MariaDB, Helm, Keycloak, Vault, NFS, Harbor</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>Kubeadm 기반 오프라인 Kubernetes 환경과 Harbor, MariaDB 3중화, NFS 동적 프로비저닝 체계를 구축</li>
+                                                <li>RabbitMQ, Redis, Keycloak, Vault를 Helm으로 운영 환경에 배치하고 애플리케이션 배포 표준을 정비</li>
+                                                <li>Node Selector와 Affinity를 활용해 Hypervisor 단위의 분산 배치 및 DR 대응 구조를 설계</li>
+                                                <li>재해복구 테스트 지원과 로컬 이미지 정책 개선을 통해 장애 상황에서도 서비스 가용성을 확보</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='65'>
-										<span class="progress-left">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span class="progress-bar border-primary"></span>
-										</span>
-										<div
-												class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-											<div class="h2 font-weight-bold">65<sup class="small">%</sup></div>
-										</div>
-									</div>
-									<!-- END -->
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>CI/CD Pipeline</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
-											 aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Linux</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="55"
-											 aria-valuemin="0" aria-valuemax="100" style="width:55%">
-											<span>55%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Docker</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="70"
-											 aria-valuemin="0" aria-valuemax="100" style="width:70%">
-											<span>70%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>OpenStack</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="50"
-											 aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Spring Boot</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="60"
-											 aria-valuemin="0" aria-valuemax="100" style="width:60%">
-											<span>60%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>JAVA</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="55"
-											 aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                            <!-- Previous Jobs -->
+                            <div class="relative">
+                                <div class="absolute -left-10 top-0 w-4 h-4 bg-gray-300 rounded-full"></div>
+                                <span class="text-gray-500 font-bold">2019.04 - 2020.12</span>
+                                <h4 class="text-2xl font-bold mt-2">Web Developer</h4>
+                                <span class="text-gray-500 font-semibold block mb-2">토모소프트 (Tomosoft)</span>
+                                <p class="text-gray-600 text-sm mb-4">태권도원 영업관리 시스템 운영 및 유지관리, 고도화 프로젝트를 담당했습니다.</p>
+                                <p class="text-xs text-gray-500 mb-4">Docker, Spring Framework, Xplatform, Linux, Nginx, Oracle, JPA</p>
+                                <div class="space-y-4 text-sm text-gray-700">
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">태권도원 영업관리시스템 운영 및 유지관리 (2020.02 ~ 2020.12)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>시스템 변경에 따른 운영 이슈를 중심으로 숙박·판촉 프로세스를 분석하고 안정화 작업 수행</li>
+                                            <li>사용자 Operation을 점검하며 화면단 프로세스를 리뉴얼하고 실사용자 교육까지 담당</li>
+                                            <li>운영 중 발생하는 업무 흐름 병목을 개선해 현업 대응 효율을 높임</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">태권도원 영업관리시스템 고도화 1차 용역 (2019.04 ~ 2019.12)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>행사 견적·예약·계약 프로세스를 현업 요구사항에 맞게 개편하고 담당자 교육 진행</li>
+                                            <li>Docker Compose 기반 무중단 배포 및 서버 이중화 구조 개선에 참여</li>
+                                            <li>신규 결제 수단 등록과 보고서성 화면 개발을 담당해 운영 기능을 확장</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="relative">
+                                <div class="absolute -left-10 top-0 w-4 h-4 bg-gray-300 rounded-full"></div>
+                                <span class="text-gray-500 font-bold">2017.10 - 2019.04</span>
+                                <h4 class="text-2xl font-bold mt-2">Web Developer</h4>
+                                <span class="text-gray-500 font-semibold block mb-2">산하정보기술 (Sanha IT)</span>
+                                <p class="text-gray-600 text-sm mb-4">호텔 PMS 솔루션 'Wings' 개발과 POS/CRM 프로젝트를 수행했습니다.</p>
+                                <p class="text-xs text-gray-500 mb-4">Spring Framework, Java, JavaScript, jQuery, Oracle, Jasper Report, SVN</p>
+                                <div class="space-y-4 text-sm text-gray-700">
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">넷시스재팬 프로젝트 (2019.03 ~ 2019.04)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>PMS 커스터마이징 및 오류 개선을 수행하고 Main Dashboard / Widget을 개발</li>
+                                            <li>일본 다테야마 호텔 현장 방문을 통해 오픈 지원과 사용자 교육 진행</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">고객관리시스템 CRM 대용량 이메일 서비스 연동 (2019.01 ~ 2019.03)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>CRM 관련 화면 리뉴얼 설계 및 개발 수행</li>
+                                            <li>대용량 이메일 전송 인터페이스 연동과 API 개발 담당</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">Wings 연구/개발 및 그룹웨어 운영 (2018.08 ~ 2019.01)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>경량화 객실 예약·운영관리 솔루션 'Wings Allegro' 개발</li>
+                                            <li>조선호텔 PMS 오류 수정 및 기능 개선</li>
+                                            <li>사내 그룹웨어 담당자로 운영과 개선 업무 수행</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">워커힐 POS F&amp;B 재구축 (2018.01 ~ 2018.06)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>서울 워커힐 호텔 POS 재구축 프로젝트에서 Frontend / Backend 개발 수행</li>
+                                            <li>POS 사용자 교육과 교체 작업을 리드하며 현장 안정화 지원</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 border border-gray-100 rounded-xl p-4">
+                                        <b class="text-primary block mb-2">승산리조트 Wings GFS PMS (2017.10 ~ 2018.01)</b>
+                                        <ul class="list-disc pl-5 space-y-1 leading-6">
+                                            <li>골프·호텔 PMS 커스터마이징 작업 수행</li>
+                                            <li>신규 보고서 개발과 기존 기능 오류 수정 및 개선 담당</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-	<section class="ftco-section ftco-project">
-		<div class="container-fluid px-md-0">
-			<div class="row no-gutters justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate" id="project-section">
-					<h1 class="big big-2">Projects</h1>
-					<h2 id="side-projects-section" class="mb-4">Side Projects</h2>
-					<p> 작지만 의미 있는 도전들을 통해 경험을 쌓고, 그 과정에서 스스로의 역량을 끊임없이 발전시키고자 합니다. </p>
-					<p>	경험을 통해 성장하는 힘을 믿고, 매 순간 최선을 다하겠습니다.</p>
-				</div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						 style="background-image: url(images/side-project-4.png);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/105daaf65d1280498847c9d22bf8c311?pvs=4"> Violin - K8S Cluster Management</a></h3>
-							<span>Multi K8S Cluster Management Platform</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/side-project-1.png);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/yjOps-Operator-9a6937eeb8a2470da403c14c162f8e4a"> yjOps - Jenkins,Gitlab Install Operator</a></h3>
-							<span>Java fabric8 SDK를 이용하여 간단한 Operator를 만들어보았습니다.</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/side-project-3.png);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/GitHub-Follower-Tracker-fba53711eea14263b92e76e4c32de88d?pvs=4"> Github Follow Tracker</a></h3>
-							<span>Github API를 이용한 Follow Management(Frontend 개발진행중)</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						 style="background-image: url(images/side-project-2.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a target="_blank" href="https://syyjbhjh7.notion.site/GoCD-Pipeline-a790433010f44f67ae6c2d08da239783?pvs=4">GoCD로 만드는 Gitops </a></h3>
-							<span>내멋대로 GoCD로 Gitops 구현해보기</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                    <!-- Skills -->
+                    <div id="page-4" class="scroll-mt-24">
+                        <h3 class="text-3xl font-bold mb-8 text-primary border-b-2 border-primary inline-block pb-2">Skills</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Skill Card -->
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">Kubernetes</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="55, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">55%</div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">Java</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="50, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">50%</div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">Docker</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="70, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">70%</div>
+                                </div>
+                            </div>
 
-	<section class="ftco-section" id="blog-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Blog</h1>
-					<h2 class="mb-4">My Blog</h2>
-					<p>Blog처럼 사용하고 있는 제 개인 노션입니다.
-					</p>
-				</div>
-			</div>
-			<div class="row d-flex">
-				<div class="blog-entry justify-content-end">
-					<a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4" class="block-20" style="background-image: url('images/image_1.jpg'); width: 1150px;">
-					</a>
-					<div class="text mt-3 d-block">
-						<h3 class="heading"><a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&pvs=4">Business Growth Diary</a>
-						</h3>
-						<p> 처음에는 문제를 해결할 때 같은 고생을 반복하지 않기 위해, 인수인계를 원활히 하기 위해, 그리고 Commit Message를 되돌아보지 않기 위해 작성하기 시작했습니다. </p>
-						<p> 그러나 이제는 제가 걸어온 길을 보여주는 성장의 일기가 되어가고 있습니다.</p>
-						<p> 아직은 다소 난잡하게 느껴지지만, 그 안에 담긴 제 고민과 배움의 흔적들이 소중하게 자리하고 있습니다. 앞으로도 꾸준히 다듬어 나갈 계획입니다.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">SQL</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="65, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">65%</div>
+                                </div>
+                            </div>
 
-	<section class="ftco-section ftco-hireme img" style="background-image: url(images/bg_1.jpg)">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>끊임없이 <span>성장하는 중</span> 입니다.</h2>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">연락주세요</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">Spring Boot</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="60, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">60%</div>
+                                </div>
+                            </div>
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
-					<p>함께 성장하는 Engineer 가 되겠습니다. </p>
-				</div>
-			</div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                <h4 class="text-xl font-bold mb-4 text-center">Linux / CI/CD</h4>
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path class="text-gray-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="text-primary" stroke-width="3" stroke-dasharray="55, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="row d-flex contact-info mb-5">
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-map-signs"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Address</h3>
-							<p>서울시 금천구 독산동</p>
-						</div>
-					</div>
-				</div>
-<!--				<div class="col-md-6 col-lg-3 d-flex ftco-animate">-->
-<!--					<div class="align-self-stretch box text-center p-4 shadow">-->
-<!--						<div class="icon d-flex align-items-center justify-content-center">-->
-<!--							<span class="icon-phone2"></span>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<h3 class="mb-4">Contact Number</h3>-->
-<!--							<p><a href="tel://1234567920"></a></p>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-paper-plane"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:info@yoursite.com">syyjbhjh7@naver.com</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-globe"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Website</h3>
-							<p><a href="https://github.com/syyjbhjh3">Github</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
+    <!-- Project Section -->
+    <section id="project-section" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h1 class="text-8xl font-bold text-gray-200 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Projects</h1>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">Side Projects</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">작지만 의미 있는 도전들을 통해 경험을 쌓고 있습니다.</p>
+        </div>
 
-		</div>
-	</section>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Project Card -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                    <img src="images/side-project-4.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Violin">
+                    <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2">Violin - K8S Cluster Management</h3>
+                        <p class="text-sm mb-4">Multi K8S Cluster Management Platform</p>
+                        <a href="https://syyjbhjh7.notion.site/105daaf65d1280498847c9d22bf8c311?pvs=4" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-primary transition-colors">View Details</a>
+                    </div>
+                </div>
 
+                <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                    <img src="images/side-project-1.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="yjOps">
+                    <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2">yjOps - Jenkins,Gitlab Operator</h3>
+                        <p class="text-sm mb-4">Java fabric8 SDK Operator</p>
+                        <a href="https://syyjbhjh7.notion.site/yjOps-Operator-9a6937eeb8a2470da403c14c162f8e4a" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-primary transition-colors">View Details</a>
+                    </div>
+                </div>
 
-	<footer class="ftco-footer ftco-section">
-		<div class="container">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                    <img src="images/side-project-3.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Follow Tracker">
+                    <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2">Github Follow Tracker</h3>
+                        <p class="text-sm mb-4">Github API Follow Management</p>
+                        <a href="https://syyjbhjh7.notion.site/GitHub-Follower-Tracker-fba53711eea14263b92e76e4c32de88d?pvs=4" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-primary transition-colors">View Details</a>
+                    </div>
+                </div>
 
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<br/>
-						Templates - https://github.com/congchu
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                    <img src="images/side-project-2.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="GoCD">
+                    <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2">GoCD로 만드는 Gitops</h3>
+                        <p class="text-sm mb-4">GoCD Gitops Implementation</p>
+                        <a href="https://syyjbhjh7.notion.site/GoCD-Pipeline-a790433010f44f67ae6c2d08da239783?pvs=4" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-primary transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Blog Section -->
+    <section id="blog-section" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h1 class="text-8xl font-bold text-gray-100 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Blog</h1>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">My Blog</h2>
+            <p class="text-gray-600">성장의 일기를 기록하고 있습니다.</p>
+        </div>
 
+        <div class="container mx-auto px-6">
+            <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 h-64 lg:h-auto overflow-hidden">
+                    <img src="images/image_1.jpg" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Blog Image">
+                </div>
+                <div class="w-full lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold mb-6 hover:text-primary transition-colors">
+                        <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=4" target="_blank" rel="noopener noreferrer">Business Growth Diary</a>
+                    </h3>
+                    <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+                        <p>처음에는 문제를 해결할 때 같은 고생을 반복하지 않기 위해 작성하기 시작했습니다.</p>
+                        <p>그러나 이제는 제가 걸어온 길을 보여주는 성장의 일기가 되어가고 있습니다. 제 고민과 배움의 흔적들이 소중하게 자리하고 있습니다.</p>
+                    </div>
+                    <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=4" target="_blank" rel="noopener noreferrer" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                        Read on Notion <span class="icon-arrow-forward"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
-	</div>
+    <!-- Hire Me Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-fixed bg-center" style="background-image: url('images/bg_1.jpg');"></div>
+        <div class="absolute inset-0 bg-primary opacity-80"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h2 class="text-4xl font-bold mb-6">끊임없이 <span class="text-yellow-300">성장하는 중</span> 입니다.</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">함께 가치를 만들어갈 팀을 찾고 있습니다.</p>
+            <a href="#contact-section" class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-xl">연락주세요</a>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact-section" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h1 class="text-8xl font-bold text-gray-100 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Contact</h1>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">Contact Me</h2>
+            <p class="text-gray-600">함께 성장하는 Engineer 가 되겠습니다.</p>
+        </div>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="icon-map text-2xl"></span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Address</h3>
+                    <p class="text-gray-500">서울시 금천구 독산동</p>
+                </div>
 
-	<script src="js/main.js"></script>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="icon-paper-plane text-2xl"></span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Email</h3>
+                    <p class="text-gray-500 underline decoration-primary">syyjbhjh7@naver.com</p>
+                </div>
 
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="icon-globe text-2xl"></span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">GitHub</h3>
+                    <p class="text-gray-500"><a href="https://github.com/syyjbhjh3" class="hover:text-primary">github.com/syyjbhjh3</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">
+                Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved
+            </p>
+            <p class="text-sm text-gray-500">
+                This template is redesigned with <span class="text-red-500">♥</span> using Tailwind CSS
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const nav = document.getElementById('navbar');
+        const brandLink = document.getElementById('brand-link');
+        const desktopNavLinks = document.querySelectorAll('#desktop-nav-links a');
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+        const setNavbarTheme = (isScrolled) => {
+            if (isScrolled) {
+                nav.classList.add('bg-white', 'shadow-md', 'py-2');
+                nav.classList.remove('bg-transparent', 'py-4');
+                brandLink.classList.add('text-gray-800');
+                brandLink.classList.remove('text-white');
+                menuBtn.classList.add('text-gray-800');
+                menuBtn.classList.remove('text-white');
+                desktopNavLinks.forEach((link) => {
+                    link.classList.add('text-gray-800');
+                    link.classList.remove('text-white');
+                });
+            } else {
+                nav.classList.remove('bg-white', 'shadow-md', 'py-2');
+                nav.classList.add('bg-transparent', 'py-4');
+                brandLink.classList.remove('text-gray-800');
+                brandLink.classList.add('text-white');
+                menuBtn.classList.remove('text-gray-800');
+                menuBtn.classList.add('text-white');
+                desktopNavLinks.forEach((link) => {
+                    link.classList.remove('text-gray-800');
+                    link.classList.add('text-white');
+                });
+            }
+        };
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            setNavbarTheme(window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenuLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Accessible accordions
+        document.querySelectorAll('[data-accordion-trigger]').forEach((trigger) => {
+            const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+            const icon = trigger.querySelector('.icon-arrow-down');
+            const syncAccordion = () => {
+                const expanded = !panel.classList.contains('hidden');
+                trigger.setAttribute('aria-expanded', String(expanded));
+                icon.classList.toggle('rotate-180', expanded);
+            };
+
+            syncAccordion();
+            trigger.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                syncAccordion();
+            });
+        });
+
+        setNavbarTheme(window.scrollY > 50);
+
+        // Typing effect
+        const texts = ["Backend Engineer", "DevOps Engineer"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById('typing-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+    </script>
 </body>
 
 </html>
