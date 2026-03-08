@@ -1,0 +1,9 @@
+# Local OMX runtime/state artifacts
+.omx/
+
+# Local instruction/reference files not intended for publishing
+AGENTS.md
+index.html.bak
+
+# Local verification helpers
+tests/
