@@ -105,7 +105,7 @@ html {
   #home-section h2 {
     font-size: clamp(1.25rem, 5.5vw, 1.65rem);
     line-height: 1.45;
-    max-width: 14ch;
+    max-width: 13ch;
     margin-left: auto;
     margin-right: auto;
   }

@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var mobileMenu = document.getElementById('mobile-menu');
   var mobileLinks = document.querySelectorAll('#mobile-menu a');
   var accordionTriggers = document.querySelectorAll('[data-accordion-trigger]');
+  var typingText = document.getElementById('typing-text');
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var syncMobileMenuState = function () {
     if (!menuButton || !mobileMenu) {
@@ -54,4 +56,46 @@ document.addEventListener('DOMContentLoaded', function () {
       icon.classList.add('rotate-180');
     }
   });
+
+  if (typingText) {
+    var roles = ['DevOps Engineer', 'Platform Engineer'];
+    var roleIndex = 0;
+    var charIndex = 0;
+    var isDeleting = false;
+
+    if (prefersReducedMotion) {
+      typingText.textContent = roles[0];
+      return;
+    }
+
+    var tick = function () {
+      var currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        charIndex -= 1;
+      } else {
+        charIndex += 1;
+      }
+
+      typingText.textContent = currentRole.slice(0, charIndex);
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        window.setTimeout(tick, 1400);
+        return;
+      }
+
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        window.setTimeout(tick, 260);
+        return;
+      }
+
+      window.setTimeout(tick, isDeleting ? 42 : 82);
+    };
+
+    typingText.textContent = '';
+    tick();
+  }
 });
