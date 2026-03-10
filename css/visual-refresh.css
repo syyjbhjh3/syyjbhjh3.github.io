@@ -89,11 +89,7 @@ body {
 #home-section h2 {
   line-height: 1.25;
   color: rgba(51, 65, 85, 0.92);
-  max-width: 18ch;
-}
-
-.hero-role-static {
-  color: rgba(51, 65, 85, 0.92);
+  max-width: 16ch;
 }
 
 #typing-text {

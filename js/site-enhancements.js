@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   if (typingText) {
-    var roles = ['DevOps Engineer', 'Platform Engineer'];
+    var roles = ['Backend Engineer', 'DevOps Engineer'];
     var roleIndex = 0;
     var charIndex = 0;
     var isDeleting = false;
