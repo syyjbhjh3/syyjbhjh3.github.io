@@ -520,6 +520,14 @@ section.py-20.bg-gray-50 article ul li::marker,
 .contact-lead-card {
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    160deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(15, 23, 42, 0.88)
+  ) !important;
+  color: #ffffff !important;
+  box-shadow: 0 30px 80px -40px rgba(15, 23, 42, 0.85);
 }
 
 .contact-lead-card::before {
