@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/visual-refresh.css">
+    <link rel="stylesheet" href="css/responsive-refactor.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -108,9 +110,8 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2">
-                    <div class="relative">
-                        <img src="images/profile_image.jpg" alt="Profile Image" class="rounded-lg shadow-2xl relative z-10 w-full max-w-md mx-auto">
-                        <div class="absolute -top-6 -left-6 w-full h-full border-4 border-primary rounded-lg z-0 hidden md:block max-w-md mx-auto"></div>
+                    <div class="profile-photo-shell max-w-md mx-auto">
+                        <img src="images/profile_image.jpg" alt="Profile Image" class="profile-photo-image w-full">
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
@@ -118,7 +119,7 @@
                     <div class="relative z-10">
                         <h2 class="text-4xl font-bold mb-6">About Me</h2>
                         <p class="text-xl text-gray-600 mb-8">
-                            <b class="text-gray-900">'경험'</b>으로 성장하는 <br/>
+                            <b class="text-gray-900">'경험'</b>으로 성장하는 <br>
                             <span class="text-primary font-semibold">Backend Engineer, DevOps Engineer</span> 입니다.
                         </p>
 
@@ -152,22 +153,66 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Proof Points Section -->
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
-                    <strong class="text-4xl font-bold text-primary block mb-2">12</strong>
-                    <span class="text-gray-500 uppercase tracking-widest text-sm">Complete Projects</span>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
-                    <strong class="text-4xl font-bold text-primary block mb-2">150</strong>
-                    <span class="text-gray-500 uppercase tracking-widest text-sm">Happy Customers</span>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
-                    <strong class="text-4xl font-bold text-primary block mb-2">1200</strong>
-                    <span class="text-gray-500 uppercase tracking-widest text-sm">Cups of coffee</span>
-                </div>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-primary uppercase tracking-[0.35em] text-sm font-semibold">Proof Points</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4">과장된 숫자 대신, 실제 맡아온 책임과 검증된 기록으로 소개합니다.</h2>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    현재 Viola PaaS에서 클러스터 프로비저닝, GitOps 기반 배포 자동화, 관측성 설계까지 연결되는 플랫폼 엔지니어링 경험을 쌓고 있습니다.
+                    단순한 성과 카드보다 업무 범위와 축적된 학습 이력이 더 신뢰를 만든다고 믿습니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow text-left">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-gray-500 uppercase tracking-[0.25em] text-xs font-semibold">Platform Delivery</span>
+                        <strong class="text-4xl font-bold text-primary">3+</strong>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">년간 Kubernetes 플랫폼 실무</h3>
+                    <p class="text-gray-600 leading-7 mb-5">
+                        2023.03부터 Backend와 DevOps 역할을 함께 맡으며, 운영 환경에 가까운 PaaS에서 설계·구축·운영 자동화의 전 과정을 담당하고 있습니다.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 leading-6">
+                        <li>클러스터 프로비저닝 자동화와 표준화</li>
+                        <li>GitOps 기반 배포 흐름 설계 및 운영</li>
+                        <li>관측성 스택 도입과 운영 가시성 강화</li>
+                    </ul>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow text-left">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-gray-500 uppercase tracking-[0.25em] text-xs font-semibold">Validated Learning</span>
+                        <strong class="text-4xl font-bold text-primary">6</strong>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">개의 자격으로 검증한 기초 체력</h3>
+                    <p class="text-gray-600 leading-7 mb-5">
+                        2024년부터 2026년까지 CKA, CKAD, KCNA, NCA, SQLD, 정보처리기사를 취득하며 클라우드 네이티브와 데이터, 소프트웨어 기본기를 꾸준히 다졌습니다.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 leading-6">
+                        <li>Cloud Native 생태계 이해와 실전 운영 역량 검증</li>
+                        <li>애플리케이션 개발부터 데이터 처리까지 균형 있게 학습</li>
+                        <li>실무와 학습을 병행하는 성장 습관 유지</li>
+                    </ul>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow text-left">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-gray-500 uppercase tracking-[0.25em] text-xs font-semibold">Core Scope</span>
+                        <strong class="text-4xl font-bold text-primary">E2E</strong>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">설계부터 운영까지 이어지는 책임 범위</h3>
+                    <p class="text-gray-600 leading-7 mb-5">
+                        Java/Spring 기반 백엔드 개발 경험 위에 Pulumi, Kubespray, ArgoCD, OpenTelemetry 계열 도구를 연결하며 서비스 운영 관점까지 함께 고민합니다.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 leading-6">
+                        <li>Pulumi · Kubespray · OpenStack 기반 IaC 자동화</li>
+                        <li>ArgoCD · Helm 중심 배포 파이프라인 구성</li>
+                        <li>Loki · Tempo · Beyla · Micrometer 기반 관측성 설계</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -326,11 +371,11 @@
                                         </div>
 
                                         <div class="border border-gray-100 rounded-xl overflow-hidden">
-                                            <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="false" aria-controls="pulumi-architecture-panel">
+                                            <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="true" aria-controls="pulumi-architecture-panel">
                                                 <span>Pulumi(IaC) 기반 클러스터 자동화 모듈 개발</span>
                                                 <span class="icon-arrow-down transition-transform"></span>
                                             </button>
-                                            <div id="pulumi-architecture-panel" class="p-4 space-y-3 hidden">
+                                            <div id="pulumi-architecture-panel" class="p-4 space-y-3">
                                                 <img src="images/architecture/pulumi-architecture.png" class="rounded border mb-3 w-full" alt="Pulumi Architecture">
                                                 <p class="text-sm italic text-gray-500">- Why: Cluster API 기반 운영 복잡도를 낮추고, 고객 환경별로 확장 가능한 표준 프로비저닝 체계를 만들기 위해 개발</p>
                                                 <ul class="list-disc pl-5 space-y-1 text-sm leading-6">
@@ -634,11 +679,38 @@
     <!-- Hire Me Section -->
     <section class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-fixed bg-center" style="background-image: url('images/bg_1.jpg');"></div>
-        <div class="absolute inset-0 bg-primary opacity-80"></div>
-        <div class="container mx-auto px-6 relative z-10 text-center text-white">
-            <h2 class="text-4xl font-bold mb-6">끊임없이 <span class="text-yellow-300">성장하는 중</span> 입니다.</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">함께 가치를 만들어갈 팀을 찾고 있습니다.</p>
-            <a href="#contact-section" class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-xl">연락주세요</a>
+        <div class="absolute inset-0 bg-slate-950/75"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-md shadow-2xl p-8 md:p-12 text-white">
+                <div class="grid gap-8 lg:grid-cols-[1.4fr,0.9fr] lg:items-start">
+                    <div>
+                        <span class="text-primary uppercase tracking-[0.35em] text-sm font-semibold">Let’s Work Together</span>
+                        <h2 class="text-4xl md:text-5xl font-bold leading-tight mt-5 mb-5">
+                            운영과 개발 사이의 복잡함을
+                            <span class="text-yellow-300">더 단순하고 안정적으로</span>
+                            만들고 싶습니다.
+                        </h2>
+                        <p class="text-lg md:text-xl leading-8 text-slate-100/90 max-w-2xl">
+                            플랫폼 자동화, 배포 체계, 관측성, 그리고 백엔드 설계까지 한 흐름으로 연결하는 일을 좋아합니다.
+                            제품과 운영이 함께 편해지는 구조를 만드는 팀과 잘 맞습니다.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                            <p class="text-xs uppercase tracking-[0.25em] text-slate-200/80 mb-2">Best Fit</p>
+                            <p class="text-xl font-semibold">Platform · Backend · DevOps</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                            <p class="text-xs uppercase tracking-[0.25em] text-slate-200/80 mb-2">Focus</p>
+                            <p class="text-lg font-semibold">IaC · GitOps · Observability</p>
+                        </div>
+                        <a href="#contact-section" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-primary font-bold shadow-xl transition-all hover:-translate-y-0.5 hover:bg-slate-100">
+                            함께 이야기하기
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -646,8 +718,8 @@
     <section id="contact-section" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center mb-16">
             <h1 class="text-8xl font-bold text-gray-100 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Contact</h1>
-            <h2 class="text-4xl font-bold relative z-10 mb-4">Contact Me</h2>
-            <p class="text-gray-600">함께 성장하는 Engineer 가 되겠습니다.</p>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">Let's Connect</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto leading-7">플랫폼, 백엔드, 운영 자동화에 대한 이야기를 편하게 나눌 수 있으면 좋겠습니다. 현재는 제품 운영 품질을 높이는 문제를 함께 푸는 팀과의 연결에 가장 열려 있습니다.</p>
         </div>
 
         <div class="container mx-auto px-6">
@@ -658,6 +730,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">Address</h3>
                     <p class="text-gray-500">서울시 금천구 독산동</p>
+                    <p class="mt-3 text-sm leading-6 text-gray-400">서울권 오프라인 미팅이나 하이브리드 협업에 무리 없이 대응할 수 있습니다.</p>
                 </div>
 
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
@@ -666,6 +739,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">Email</h3>
                     <p class="text-gray-500 underline decoration-primary">syyjbhjh7@naver.com</p>
+                    <p class="mt-3 text-sm leading-6 text-gray-400">협업 제안, 포지션 문의, 사이드 프로젝트 관련 연락은 메일이 가장 빠릅니다.</p>
                 </div>
 
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
@@ -674,6 +748,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">GitHub</h3>
                     <p class="text-gray-500"><a href="https://github.com/syyjbhjh3" class="hover:text-primary">github.com/syyjbhjh3</a></p>
+                    <p class="mt-3 text-sm leading-6 text-gray-400">운영 자동화와 실험적인 사이드 프로젝트를 지속적으로 정리하고 있습니다.</p>
                 </div>
             </div>
         </div>
@@ -686,7 +761,7 @@
                 Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved
             </p>
             <p class="text-sm text-gray-500">
-                This template is redesigned with <span class="text-red-500">♥</span> using Tailwind CSS
+                Backend · DevOps · Platform Engineering — refined by Park Young Jun
             </p>
         </div>
     </footer>
@@ -784,6 +859,7 @@
             }
         }());
     </script>
+    <script src="js/site-enhancements.js"></script>
 </body>
 
 </html>
