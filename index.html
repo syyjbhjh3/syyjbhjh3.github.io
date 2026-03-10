@@ -53,21 +53,21 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a id="brand-link" class="text-2xl font-bold text-white tracking-widest uppercase transition-colors" href="index.html">
+            <a id="brand-link" class="text-2xl font-bold text-slate-900 tracking-widest uppercase transition-colors" href="index.html">
                 <span class="text-primary">P</span>arkYoungJun
             </a>
 
             <div id="desktop-nav-links" class="hidden md:flex space-x-8">
-                <a href="#home-section" class="text-white hover:text-primary transition-colors">Home</a>
-                <a href="#about-section" class="text-white hover:text-primary transition-colors">About</a>
-                <a href="#resume-section" class="text-white hover:text-primary transition-colors">Resume</a>
-                <a href="#project-section" class="text-white hover:text-primary transition-colors">Project</a>
-                <a href="#blog-section" class="text-white hover:text-primary transition-colors">Blog</a>
-                <a href="#contact-section" class="text-white hover:text-primary transition-colors">Contact</a>
+                <a href="#home-section" class="text-slate-700 hover:text-primary transition-colors">Home</a>
+                <a href="#about-section" class="text-slate-700 hover:text-primary transition-colors">About</a>
+                <a href="#resume-section" class="text-slate-700 hover:text-primary transition-colors">Resume</a>
+                <a href="#project-section" class="text-slate-700 hover:text-primary transition-colors">Project</a>
+                <a href="#blog-section" class="text-slate-700 hover:text-primary transition-colors">Blog</a>
+                <a href="#contact-section" class="text-slate-700 hover:text-primary transition-colors">Contact</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-slate-800 focus:outline-none">
                 <span class="icon-menu text-2xl"></span>
             </button>
         </div>
@@ -86,27 +86,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home-section" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+    <section id="home-section" class="hero-section relative min-h-[92vh] flex items-center overflow-hidden bg-slate-50">
         <div class="hero-backdrop absolute inset-0"></div>
         <div class="hero-grid absolute inset-0"></div>
         <div class="hero-orb hero-orb-one absolute"></div>
         <div class="hero-orb hero-orb-two absolute"></div>
         <div class="hero-glow absolute inset-x-0 bottom-0 h-48"></div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <div class="hero-copy-shell max-w-4xl mx-auto">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="hero-content max-w-5xl text-center lg:text-left">
                 <span class="hero-kicker text-primary uppercase tracking-widest font-semibold mb-4 block">Platform · Backend · DevOps</span>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">박영준</h1>
-                <h2 class="text-2xl md:text-3xl text-gray-300 font-light">
-                    Backend Engineer <span class="text-slate-400">·</span> <span id="typing-text" class="text-white font-semibold underline decoration-primary">DevOps Engineer</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-950 mb-6">박영준</h1>
+                <h2 class="text-2xl md:text-3xl text-slate-600 font-light">
+                    <span id="typing-text" class="text-slate-900 font-semibold">Backend Engineer · DevOps Engineer</span>
                 </h2>
-                <p class="hero-summary mt-8 max-w-2xl mx-auto text-base md:text-lg text-slate-300/90 leading-8">
+                <p class="hero-summary mt-8 max-w-2xl mx-auto lg:mx-0 text-base md:text-lg text-slate-600 leading-8">
                     복잡한 운영 환경을 더 단단한 배포 구조와 관측 가능한 시스템으로 바꾸는 일을 좋아합니다.
                 </p>
-                <div class="hero-chip-row mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-200/90">
-                    <span class="hero-chip">Kubernetes Platform</span>
-                    <span class="hero-chip">GitOps Workflow</span>
-                    <span class="hero-chip">Observability Design</span>
+                <div class="hero-actions mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                    <a href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-white font-semibold shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5 hover:bg-blue-600">
+                        이력서 보기
+                    </a>
+                    <a href="#contact-section" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-3 text-slate-700 font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
+                        연락하기
+                    </a>
                 </div>
             </div>
         </div>
@@ -836,13 +839,13 @@
             } else {
                 nav.classList.remove('bg-white', 'shadow-md', 'py-2');
                 nav.classList.add('bg-transparent', 'py-4');
-                brandLink.classList.remove('text-gray-800');
-                brandLink.classList.add('text-white');
-                menuBtn.classList.remove('text-gray-800');
-                menuBtn.classList.add('text-white');
+                brandLink.classList.remove('text-white');
+                brandLink.classList.add('text-slate-900');
+                menuBtn.classList.remove('text-white');
+                menuBtn.classList.add('text-slate-800');
                 desktopNavLinks.forEach((link) => {
-                    link.classList.remove('text-gray-800');
-                    link.classList.add('text-white');
+                    link.classList.remove('text-white');
+                    link.classList.add('text-slate-700');
                 });
             }
         };
