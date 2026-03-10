@@ -89,17 +89,21 @@ html {
 
   #home-section {
     min-height: 100svh;
-    padding-top: 5.5rem;
+    padding-top: 4.75rem;
     padding-bottom: 3.5rem;
   }
 
+  #home-section .container {
+    transform: translateY(-1rem);
+  }
+
   #home-section h1 {
-    font-size: clamp(3.25rem, 16vw, 4.5rem);
+    font-size: clamp(3rem, 15vw, 4.15rem);
     line-height: 0.95;
   }
 
   #home-section h2 {
-    font-size: clamp(1.45rem, 6.2vw, 1.9rem);
+    font-size: clamp(1.35rem, 5.8vw, 1.8rem);
     line-height: 1.35;
     max-width: 11ch;
     margin-left: auto;
@@ -114,6 +118,19 @@ html {
 
   #home-section .absolute.bottom-10 {
     bottom: 1.75rem;
+  }
+
+  .hero-copy-shell {
+    padding: 1.75rem 1.25rem;
+    border-radius: 1.75rem;
+  }
+
+  .hero-chip-row {
+    gap: 0.6rem;
+  }
+
+  .hero-chip {
+    width: 100%;
   }
 
   #about-section .flex.items-center {
@@ -256,13 +273,19 @@ html {
   }
 
   #blog-section + section h2 {
-    font-size: 2.5rem;
-    line-height: 1.15;
+    font-size: 2.15rem;
+    line-height: 1.18;
+    max-width: 12ch;
   }
 
   #blog-section + section p {
     font-size: 1.1rem;
     line-height: 1.6;
+  }
+
+  .cta-panel {
+    padding: 1.75rem;
+    border-radius: 1.75rem;
   }
 
   #contact-section .grid {
@@ -272,6 +295,11 @@ html {
   #contact-section .grid > div {
     grid-column: auto;
     padding: 1.75rem 1.5rem;
+  }
+
+  .contact-lead-card {
+    padding: 1.75rem;
+    border-radius: 1.75rem;
   }
 }
 
@@ -309,5 +337,9 @@ html {
 
   #contact-section .grid {
     gap: 1.25rem;
+  }
+
+  .cta-heading {
+    max-width: 13ch;
   }
 }

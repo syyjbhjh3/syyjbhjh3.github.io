@@ -86,16 +86,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home-section" class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/bg_1.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
+    <section id="home-section" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+        <div class="hero-backdrop absolute inset-0"></div>
+        <div class="hero-grid absolute inset-0"></div>
+        <div class="hero-orb hero-orb-one absolute"></div>
+        <div class="hero-orb hero-orb-two absolute"></div>
+        <div class="hero-glow absolute inset-x-0 bottom-0 h-48"></div>
 
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <span class="text-primary uppercase tracking-widest font-semibold mb-4 block">Hey! I am</span>
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">박영준</h1>
-            <h2 class="text-2xl md:text-3xl text-gray-300 font-light">
-                I'm a <span id="typing-text" class="text-white font-semibold underline decoration-primary">Backend Engineer</span>
-            </h2>
+            <div class="hero-copy-shell max-w-4xl mx-auto">
+                <span class="hero-kicker text-primary uppercase tracking-widest font-semibold mb-4 block">Platform · Backend · DevOps</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">박영준</h1>
+                <h2 class="text-2xl md:text-3xl text-gray-300 font-light">
+                    I build <span id="typing-text" class="text-white font-semibold underline decoration-primary">Backend Engineer</span>
+                </h2>
+                <p class="hero-summary mt-8 max-w-2xl mx-auto text-base md:text-lg text-slate-300/90 leading-8">
+                    복잡한 운영 환경을 더 단단한 배포 구조와 관측 가능한 시스템으로 바꾸는 일을 좋아합니다.
+                </p>
+                <div class="hero-chip-row mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-200/90">
+                    <span class="hero-chip">Kubernetes Platform</span>
+                    <span class="hero-chip">GitOps Workflow</span>
+                    <span class="hero-chip">Observability Design</span>
+                </div>
+            </div>
         </div>
 
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
@@ -678,20 +691,19 @@
 
     <!-- Hire Me Section -->
     <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-fixed bg-center" style="background-image: url('images/bg_1.jpg');"></div>
-        <div class="absolute inset-0 bg-slate-950/75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(62,100,255,0.24),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(250,204,21,0.12),transparent_18%),linear-gradient(135deg,#0f172a_0%,#111827_42%,#020617_100%)]"></div>
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-5xl mx-auto rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-md shadow-2xl p-8 md:p-12 text-white">
+            <div class="cta-panel max-w-5xl mx-auto rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-md shadow-2xl p-8 md:p-12 text-white">
                 <div class="grid gap-8 lg:grid-cols-[1.4fr,0.9fr] lg:items-start">
                     <div>
                         <span class="text-primary uppercase tracking-[0.35em] text-sm font-semibold">Let’s Work Together</span>
-                        <h2 class="text-4xl md:text-5xl font-bold leading-tight mt-5 mb-5">
+                        <h2 class="cta-heading text-4xl md:text-5xl font-bold leading-[1.15] mt-5 mb-5 max-w-3xl">
                             운영과 개발 사이의 복잡함을
-                            <span class="text-yellow-300">더 단순하고 안정적으로</span>
-                            만들고 싶습니다.
+                            <span class="text-yellow-300">더 단순하고 안정적인 구조로</span>
+                            바꾸는 일을 좋아합니다.
                         </h2>
                         <p class="text-lg md:text-xl leading-8 text-slate-100/90 max-w-2xl">
-                            플랫폼 자동화, 배포 체계, 관측성, 그리고 백엔드 설계까지 한 흐름으로 연결하는 일을 좋아합니다.
+                            플랫폼 자동화, 배포 체계, 관측성, 백엔드 설계를 한 흐름으로 연결합니다.
                             제품과 운영이 함께 편해지는 구조를 만드는 팀과 잘 맞습니다.
                         </p>
                     </div>
@@ -705,9 +717,14 @@
                             <p class="text-xs uppercase tracking-[0.25em] text-slate-200/80 mb-2">Focus</p>
                             <p class="text-lg font-semibold">IaC · GitOps · Observability</p>
                         </div>
-                        <a href="#contact-section" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-primary font-bold shadow-xl transition-all hover:-translate-y-0.5 hover:bg-slate-100">
-                            함께 이야기하기
-                        </a>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="#contact-section" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-primary font-bold shadow-xl transition-all hover:-translate-y-0.5 hover:bg-slate-100">
+                                함께 이야기하기
+                            </a>
+                            <a href="https://github.com/syyjbhjh3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10">
+                                GitHub 보기
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -723,32 +740,61 @@
         </div>
 
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="icon-map text-2xl"></span>
+            <div class="contact-shell grid gap-8 lg:grid-cols-[0.95fr,1.25fr] items-stretch">
+                <div class="contact-lead-card rounded-[2rem] bg-slate-950 text-white p-8 md:p-10 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.85)]">
+                    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Contact Snapshot</p>
+                    <h3 class="text-3xl font-bold leading-tight mb-5">문제를 오래 운영 가능한 구조로 바꾸는 대화를 좋아합니다.</h3>
+                    <p class="text-slate-300 leading-7 mb-8">
+                        새로운 역할, 협업 제안, 플랫폼/백엔드/DevOps 관련 이야기라면 부담 없이 연락 주세요.
+                        실제 운영에서 마주치는 복잡함을 더 단단한 구조로 바꾸는 일에 관심이 많습니다.
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-sm text-slate-200/90">
+                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Kubernetes</span>
+                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">GitOps</span>
+                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Spring Boot</span>
+                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Observability</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900">Address</h3>
-                    <p class="text-gray-500">서울시 금천구 독산동</p>
-                    <p class="mt-3 text-sm leading-6 text-gray-400">서울권 오프라인 미팅이나 하이브리드 협업에 무리 없이 대응할 수 있습니다.</p>
                 </div>
 
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="icon-paper-plane text-2xl"></span>
+                <div class="contact-card-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
+                            <span class="icon-map text-xl"></span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">Address</h3>
+                        <p class="text-gray-500 leading-7">서울시 금천구 독산동</p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">서울권 오프라인 미팅이나 하이브리드 협업에 무리 없이 대응할 수 있습니다.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900">Email</h3>
-                    <p class="text-gray-500 underline decoration-primary">syyjbhjh7@naver.com</p>
-                    <p class="mt-3 text-sm leading-6 text-gray-400">협업 제안, 포지션 문의, 사이드 프로젝트 관련 연락은 메일이 가장 빠릅니다.</p>
-                </div>
 
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="icon-globe text-2xl"></span>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
+                            <span class="icon-paper-plane text-xl"></span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">Email</h3>
+                        <p class="text-gray-500 leading-7"><a href="mailto:syyjbhjh7@naver.com" class="underline decoration-primary underline-offset-4 hover:text-primary">syyjbhjh7@naver.com</a></p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">협업 제안, 포지션 문의, 사이드 프로젝트 관련 연락은 메일이 가장 빠릅니다.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900">GitHub</h3>
-                    <p class="text-gray-500"><a href="https://github.com/syyjbhjh3" class="hover:text-primary">github.com/syyjbhjh3</a></p>
-                    <p class="mt-3 text-sm leading-6 text-gray-400">운영 자동화와 실험적인 사이드 프로젝트를 지속적으로 정리하고 있습니다.</p>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
+                            <span class="icon-globe text-xl"></span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">GitHub</h3>
+                        <p class="text-gray-500 leading-7"><a href="https://github.com/syyjbhjh3" target="_blank" rel="noopener noreferrer" class="hover:text-primary">github.com/syyjbhjh3</a></p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">운영 자동화와 실험적인 사이드 프로젝트를 지속적으로 정리하고 있습니다.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
+                            <span class="icon-document text-xl"></span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">Resume &amp; Notes</h3>
+                        <div class="flex flex-col gap-2 text-gray-500 leading-7">
+                            <a href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="hover:text-primary">이력서 보기</a>
+                            <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=43" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Notion 아카이브</a>
+                        </div>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">이력서와 기록을 함께 보면 현재 관심사와 작업 방향을 더 빠르게 파악할 수 있습니다.</p>
+                    </div>
                 </div>
             </div>
         </div>
