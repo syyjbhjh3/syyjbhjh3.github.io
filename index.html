@@ -98,7 +98,7 @@
                 <span class="hero-kicker text-primary uppercase tracking-widest font-semibold mb-4 block">Platform · Backend · DevOps</span>
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">박영준</h1>
                 <h2 class="text-2xl md:text-3xl text-gray-300 font-light">
-                    I build <span id="typing-text" class="text-white font-semibold underline decoration-primary">Backend Engineer</span>
+                    Backend Engineer <span class="text-slate-400">·</span> <span id="typing-text" class="text-white font-semibold underline decoration-primary">DevOps Engineer</span>
                 </h2>
                 <p class="hero-summary mt-8 max-w-2xl mx-auto text-base md:text-lg text-slate-300/90 leading-8">
                     복잡한 운영 환경을 더 단단한 배포 구조와 관측 가능한 시스템으로 바꾸는 일을 좋아합니다.
@@ -742,17 +742,17 @@
         <div class="container mx-auto px-6">
             <div class="contact-shell grid gap-8 lg:grid-cols-[0.95fr,1.25fr] items-stretch">
                 <div class="contact-lead-card rounded-[2rem] bg-slate-950 text-white p-8 md:p-10 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.85)]">
-                    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Best Conversation Topics</p>
+                    <p class="text-sky-300 uppercase tracking-[0.3em] text-xs font-semibold mb-4">Best Conversation Topics</p>
                     <h3 class="text-3xl font-bold leading-tight mb-5">이런 대화라면 더 반갑습니다.</h3>
-                    <p class="text-slate-300 leading-7 mb-8">
+                    <p class="text-slate-100 leading-7 mb-8">
                         새로운 역할, 협업 제안, 플랫폼/백엔드/DevOps 관련 이야기라면 부담 없이 연락 주세요.
                         특히 운영 자동화, GitOps, 관측성 개선, IaC/배포 구조 정리 같은 주제에 관심이 많습니다.
                     </p>
-                    <div class="flex flex-wrap gap-3 text-sm text-slate-200/90">
-                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Kubernetes</span>
-                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">GitOps</span>
-                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Spring Boot</span>
-                        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Observability</span>
+                    <div class="contact-topic-chips flex flex-wrap gap-3 text-sm text-white">
+                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Kubernetes</span>
+                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">GitOps</span>
+                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Spring Boot</span>
+                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Observability</span>
                     </div>
                 </div>
 
@@ -881,29 +881,6 @@
 
         setNavbarTheme(window.scrollY > 50);
 
-        // Typing effect
-        const texts = ["Backend Engineer", "DevOps Engineer"];
-        let count = 0;
-        let index = 0;
-        let currentText = "";
-        let letter = "";
-
-        (function type() {
-            if (count === texts.length) {
-                count = 0;
-            }
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
-
-            document.getElementById('typing-text').textContent = letter;
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 2000);
-            } else {
-                setTimeout(type, 100);
-            }
-        }());
     </script>
     <script src="js/site-enhancements.js"></script>
 </body>
