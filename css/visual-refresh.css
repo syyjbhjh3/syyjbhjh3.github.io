@@ -500,6 +500,7 @@ section.py-20.bg-gray-50 article ul li::marker,
 
 .cta-heading {
   text-wrap: balance;
+  max-width: 13ch;
 }
 
 #contact-section .w-16.h-16 {

@@ -275,7 +275,7 @@ html {
   #blog-section + section h2 {
     font-size: 2.15rem;
     line-height: 1.18;
-    max-width: 12ch;
+    max-width: 11.5ch;
   }
 
   #blog-section + section p {
@@ -340,6 +340,6 @@ html {
   }
 
   .cta-heading {
-    max-width: 13ch;
+    max-width: 12ch;
   }
 }
