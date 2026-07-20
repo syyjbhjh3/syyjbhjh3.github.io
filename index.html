@@ -407,6 +407,19 @@
 
                                     <div class="space-y-6">
                                         <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">Viola 4.0 Kubernetes Platform Modernization (2026.03 ~ Present)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Java, Spring Boot, Kubernetes, Kubespray, Ansible, Harbor, Helm</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>VM·Bare Metal 클러스터 프로비저닝 초기화와 실행 흐름을 구현</li>
+                                                <li>노드별 접속 계정과 환경 차이를 지원하도록 프로비저닝 요청 모델을 개선</li>
+                                                <li>Registry API를 특정 구현체에 종속되지 않는 Harbor Adapter 구조로 재구성</li>
+                                                <li>서비스 간 권한 조회와 리소스 식별 경로의 정합성을 개선</li>
+                                                <li>기존 시스템의 API·DTO 차이를 분석하고 단계적 전환 기준을 수립</li>
+                                                <li>패키징과 릴리스 통합 과정에서 실제 배포 환경 기준의 호환성을 검증</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
                                             <b class="text-primary block mb-2">HanaCloudia 2차 고도화 (2024.07 ~ 2024.12)</b>
                                             <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
                                                 <li>GPU 클러스터 연동 과정에서 Retryable API를 설계해 수집 실패 상황을 안정적으로 복구</li>
@@ -616,11 +629,49 @@
     <section id="project-section" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 text-center mb-16">
             <h1 class="text-8xl font-bold text-gray-200 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Projects</h1>
-            <h2 class="text-4xl font-bold relative z-10 mb-4">Side Projects</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">작지만 의미 있는 도전들을 통해 경험을 쌓고 있습니다.</p>
+            <h2 class="text-4xl font-bold relative z-10 mb-4">Featured &amp; Side Projects</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">플랫폼 운영의 복잡함을 줄이고, 반복 가능한 개발 흐름으로 바꾼 작업들입니다.</p>
         </div>
 
         <div class="container mx-auto px-6">
+            <article class="mb-10 overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-xl shadow-blue-900/10">
+                <div class="grid lg:grid-cols-[1.05fr,1fr]">
+                    <div class="relative min-h-[20rem] overflow-hidden bg-slate-950">
+                        <img src="images/omv-rabbit-hero.png" class="absolute inset-0 h-full w-full object-cover opacity-85" alt="oh-my-viola rabbit mascot">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-7 text-left text-white md:p-9">
+                            <span class="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur">Featured Project</span>
+                            <p class="mt-4 text-sm font-semibold text-blue-200">AI Agent Runtime Platform</p>
+                            <h3 class="mt-1 text-4xl font-bold tracking-tight md:text-5xl">oh-my-viola</h3>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-center p-7 text-left md:p-10">
+                        <p class="text-lg leading-8 text-slate-700">
+                            Codex, Claude Code, Cursor 등 서로 다른 AI 개발 도구를 Viola 업무 환경에 안전하고 일관되게 연결하는 Agent Runtime Platform을 설계하고 개발했습니다.
+                        </p>
+                        <p class="mt-4 leading-7 text-slate-600">
+                            실행 환경, 업무 스킬, 인증, 메모리, 운영 안전장치를 하나의 CLI와 런타임 계약으로 통합해 팀의 반복 업무를 재사용 가능한 개발 흐름으로 표준화했습니다.
+                        </p>
+
+                        <ul class="mt-6 grid gap-3 text-sm leading-6 text-slate-700 sm:grid-cols-2">
+                            <li class="rounded-xl bg-slate-50 px-4 py-3"><strong class="block text-slate-950">Unified Runtime</strong>Codex · Claude · Cursor · OMX</li>
+                            <li class="rounded-xl bg-slate-50 px-4 py-3"><strong class="block text-slate-950">Reusable Skills</strong>Jira · GitLab · Figma · Runtime</li>
+                            <li class="rounded-xl bg-slate-50 px-4 py-3"><strong class="block text-slate-950">Safety by Default</strong>Local-only Auth · Read-only Evidence</li>
+                            <li class="rounded-xl bg-slate-50 px-4 py-3"><strong class="block text-slate-950">Local Memory</strong>개인화된 업무 컨텍스트 유지</li>
+                        </ul>
+
+                        <div class="mt-7 flex flex-wrap gap-2" aria-label="oh-my-viola 기술 스택">
+                            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">TypeScript</span>
+                            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Node.js</span>
+                            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">MCP</span>
+                            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Agent Skills</span>
+                            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Workflow Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Project Card -->
                 <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
