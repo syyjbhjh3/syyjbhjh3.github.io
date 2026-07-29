@@ -11,9 +11,7 @@ html {
   #about-section,
   #resume-section,
   #project-section,
-  #blog-section,
-  #contact-section,
-  #blog-section + section {
+  #blog-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -54,13 +52,6 @@ html {
     grid-template-columns: 1fr;
   }
 
-  #contact-section .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  #contact-section .grid > div:last-child {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 767px) {
@@ -75,9 +66,7 @@ html {
   #about-section .container,
   #resume-section .container,
   #project-section .container,
-  #blog-section .container,
-  #contact-section .container,
-  #blog-section + section .container {
+  #blog-section .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
@@ -257,35 +246,6 @@ html {
     line-height: 1.15;
   }
 
-  #blog-section + section h2 {
-    font-size: 2.15rem;
-    line-height: 1.18;
-    max-width: 11.5ch;
-  }
-
-  #blog-section + section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .cta-panel {
-    padding: 1.75rem;
-    border-radius: 1.75rem;
-  }
-
-  #contact-section .grid {
-    grid-template-columns: 1fr;
-  }
-
-  #contact-section .grid > div {
-    grid-column: auto;
-    padding: 1.75rem 1.5rem;
-  }
-
-  .contact-lead-card {
-    padding: 1.75rem;
-    border-radius: 1.75rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -320,11 +280,4 @@ html {
     gap: 1.5rem;
   }
 
-  #contact-section .grid {
-    gap: 1.25rem;
-  }
-
-  .cta-heading {
-    max-width: 12ch;
-  }
 }

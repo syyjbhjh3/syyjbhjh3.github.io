@@ -138,7 +138,6 @@ body {
 #about-section a[target="_blank"],
 #project-section a[target="_blank"],
 #blog-section a[target="_blank"],
-#contact-section a,
 [data-accordion-trigger] {
   transition:
     color 180ms ease,
@@ -186,8 +185,7 @@ body {
 }
 
 #about-section a[target="_blank"],
-#project-section a[target="_blank"],
-section.py-24.relative.overflow-hidden a[href="#contact-section"] {
+#project-section a[target="_blank"] {
   box-shadow: 0 18px 40px -24px rgba(15, 23, 42, 0.38);
 }
 
@@ -243,8 +241,6 @@ section.py-24.relative.overflow-hidden a[href="#contact-section"] {
 #about-section a[target="_blank"]:focus-visible,
 #project-section a[target="_blank"]:hover,
 #project-section a[target="_blank"]:focus-visible,
-section.py-24.relative.overflow-hidden a[href="#contact-section"]:hover,
-section.py-24.relative.overflow-hidden a[href="#contact-section"]:focus-visible,
 #blog-section a[target="_blank"]:hover,
 #blog-section a[target="_blank"]:focus-visible {
   transform: translateY(-2px);
@@ -253,8 +249,7 @@ section.py-24.relative.overflow-hidden a[href="#contact-section"]:focus-visible,
 
 section.py-20.bg-gray-50,
 #project-section,
-#blog-section,
-#contact-section {
+#blog-section {
   background-image: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.82),
@@ -265,8 +260,7 @@ section.py-20.bg-gray-50,
 section.py-20.bg-gray-50 article,
 #resume-section .rounded-2xl,
 #resume-section .rounded-xl,
-#blog-section .rounded-3xl,
-#contact-section .rounded-2xl {
+#blog-section .rounded-3xl {
   position: relative;
   overflow: hidden;
   border-color: var(--refresh-border);
@@ -281,8 +275,7 @@ section.py-20.bg-gray-50 article,
 section.py-20.bg-gray-50 article::before,
 #resume-section .rounded-2xl::before,
 #resume-section .rounded-xl::before,
-#blog-section .rounded-3xl::before,
-#contact-section .rounded-2xl::before {
+#blog-section .rounded-3xl::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
@@ -298,8 +291,7 @@ section.py-20.bg-gray-50 article::before,
 section.py-20.bg-gray-50 article:hover,
 #resume-section .rounded-2xl:hover,
 #resume-section .rounded-xl:hover,
-#blog-section .rounded-3xl:hover,
-#contact-section .rounded-2xl:hover {
+#blog-section .rounded-3xl:hover {
   transform: translateY(-6px);
   border-color: var(--refresh-border-strong);
   box-shadow: var(--refresh-shadow-lift);
@@ -308,8 +300,7 @@ section.py-20.bg-gray-50 article:hover,
 section.py-20.bg-gray-50 article strong,
 #resume-section .text-primary.font-bold,
 #resume-section b.text-primary,
-#blog-section .text-primary,
-#contact-section .text-primary {
+#blog-section .text-primary {
   text-shadow: 0 10px 28px rgba(var(--refresh-primary-rgb), 0.12);
 }
 
@@ -325,8 +316,7 @@ section.py-20.bg-gray-50 article ul li::marker,
 
 #resume-section > .container:first-child,
 #project-section > .container:first-child,
-#blog-section > .container:first-child,
-#contact-section > .container:first-child {
+#blog-section > .container:first-child {
   margin-bottom: 4.5rem;
 }
 
@@ -471,91 +461,6 @@ section.py-20.bg-gray-50 article ul li::marker,
   border: 1px solid rgba(148, 163, 184, 0.12);
 }
 
-#blog-section + section {
-  background:
-    linear-gradient(180deg, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96));
-}
-
-.cta-panel {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 40px 120px -56px rgba(15, 23, 42, 0.92);
-}
-
-.cta-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top right, rgba(var(--refresh-primary-rgb), 0.18), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(250, 204, 21, 0.12), transparent 16%);
-  pointer-events: none;
-}
-
-.cta-heading {
-  text-wrap: balance;
-  max-width: 13ch;
-}
-
-#contact-section .w-16.h-16 {
-  box-shadow: inset 0 0 0 1px rgba(var(--refresh-primary-rgb), 0.08);
-}
-
-#contact-section .grid > div {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.98),
-    rgba(248, 250, 252, 0.98)
-  );
-}
-
-.contact-lead-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(
-    160deg,
-    rgba(15, 23, 42, 0.96),
-    rgba(15, 23, 42, 0.88)
-  ) !important;
-  color: #ffffff !important;
-  box-shadow: 0 30px 80px -40px rgba(15, 23, 42, 0.85);
-}
-
-.contact-lead-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top right, rgba(var(--refresh-primary-rgb), 0.2), transparent 26%),
-    radial-gradient(circle at bottom left, rgba(250, 204, 21, 0.1), transparent 16%);
-  pointer-events: none;
-}
-
-.contact-lead-card > * {
-  position: relative;
-}
-
-.contact-lead-card h3 {
-  color: #ffffff;
-  text-shadow: 0 12px 34px rgba(15, 23, 42, 0.28);
-}
-
-.contact-lead-card p {
-  color: rgba(241, 245, 249, 0.96);
-}
-
-.contact-topic-chips span {
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.contact-card-grid > div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 60px -38px rgba(15, 23, 42, 0.32);
-}
-
 a:focus-visible,
 button:focus-visible {
   outline: none;
@@ -578,8 +483,7 @@ button:focus-visible {
 
   #resume-section > .container:first-child,
   #project-section > .container:first-child,
-  #blog-section > .container:first-child,
-  #contact-section > .container:first-child {
+  #blog-section > .container:first-child {
     margin-bottom: 3rem;
   }
 
@@ -587,7 +491,6 @@ button:focus-visible {
   #resume-section .rounded-2xl:hover,
   #resume-section .rounded-xl:hover,
   #blog-section .rounded-3xl:hover,
-  #contact-section .rounded-2xl:hover,
   #project-section .group:hover,
   #resume-section nav a:hover,
   #resume-section nav a:focus-visible {
@@ -602,14 +505,12 @@ button:focus-visible {
   #about-section a[target="_blank"],
   #project-section a[target="_blank"],
   #blog-section a[target="_blank"],
-  #contact-section a,
   [data-accordion-trigger],
   #project-section .group,
   section.py-20.bg-gray-50 article,
   #resume-section .rounded-2xl,
   #resume-section .rounded-xl,
-  #blog-section .rounded-3xl,
-  #contact-section .rounded-2xl {
+  #blog-section .rounded-3xl {
     transition: none !important;
   }
 }

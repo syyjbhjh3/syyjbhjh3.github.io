@@ -2,14 +2,14 @@
 
 ## Source of truth
 - Status: Active
-- Last refreshed: 2026-07-20
-- Primary product surfaces: 단일 페이지 포트폴리오의 Hero, About, Resume, Projects, Blog, Contact
-- Evidence reviewed: `index.html`, `css/visual-refresh.css`, `css/responsive-refactor.css`, `images/`
+- Last refreshed: 2026-07-29
+- Primary product surfaces: 단일 페이지 포트폴리오의 Hero, About, Resume, Projects, Blog
+- Evidence reviewed: `index.html`, `css/visual-refresh.css`, `css/responsive-refactor.css`, `images/`, `oh-my-viola/README.md`, `oh-my-viola/docs/architecture.md`
 
 ## Brand
 - Personality: 신뢰감 있는 플랫폼 엔지니어, 차분하고 명확한 기술 전달
 - Trust signals: 구체적인 역할, 문제와 결과, 검증 가능한 기술 스택
-- Avoid: 과장된 수식어, 기밀 정보, 장식만을 위한 신규 UI 패턴
+- Avoid: 과장된 수식어, 상투적인 채용 CTA, 마케팅형 아키텍처 인포그래픽, 기밀 정보, 장식만을 위한 신규 UI 패턴
 
 ## Product goals
 - Goals: 최근 플랫폼 엔지니어링 성과와 대표 프로젝트를 빠르게 이해시키기
@@ -18,13 +18,13 @@
 
 ## Personas and jobs
 - Primary personas: 채용 담당자, 엔지니어링 리더, 협업 파트너
-- User jobs: 전문 분야, 최근 성과, 기술 깊이, 연락 방법 확인
+- User jobs: 전문 분야, 최근 성과, 기술 깊이 확인
 - Key contexts of use: 데스크톱 이력 검토와 모바일 링크 열람
 
 ## Information architecture
-- Primary navigation: Home, About, Resume, Project, Blog, Contact
+- Primary navigation: Home, About, Resume, Project, Blog
 - Core routes/screens: `index.html` 단일 페이지
-- Content hierarchy: 역할 요약 → 경력과 성과 → 대표 프로젝트 → 기록과 연락처
+- Content hierarchy: 역할 요약 → 경력과 성과 → 대표 프로젝트 → 기록
 
 ## Design principles
 - 기존 섹션, 카드, 색상 토큰을 재사용한다.
@@ -38,11 +38,11 @@
 - Spacing/layout rhythm: Tailwind의 4/6/8 단위와 넓은 섹션 여백
 - Shape/radius/elevation: `rounded-xl` 이상, 얕은 기본 그림자와 제한적인 hover lift
 - Motion: 180~500ms 전환, 정보 이해를 방해하지 않는 범위
-- Imagery/iconography: 실제 프로젝트 이미지와 기존 아이콘 폰트 우선
+- Imagery/iconography: 실제 프로젝트 이미지와 기존 아이콘 폰트 우선. 아키텍처는 흰 배경, 얇은 선, 점선 경계, 흐름 화살표를 사용한 기존 다이어그램 문법 유지
 
 ## Components
 - Existing components to reuse: 섹션 헤더, 경력 카드, 기술 배지, 프로젝트 카드, CTA 링크
-- New/changed components: Projects 상단의 단일 Featured Project 카드
+- New/changed components: Projects 상단의 단일 Featured Project 카드, Oh My Viola 경력 카드 내부 아키텍처 다이어그램
 - Variants and states: 기본, hover, keyboard focus, 모바일 적층
 - Token/component ownership: Tailwind 설정과 `css/visual-refresh.css`
 
@@ -69,7 +69,7 @@
 ## Content voice
 - Tone: 담백하고 결과 중심의 한국어, 필요한 기술명만 영어 사용
 - Terminology: Agent Runtime Platform, Kubernetes Platform, Provisioning 등 일관된 명칭 사용
-- Microcopy rules: 추상적인 역량 표현보다 담당 범위와 구현 결과를 한 문장에 연결
+- Microcopy rules: 추상적인 역량 표현과 감성적인 연락 유도 문구를 피하고, 담당 범위와 구현 결과를 한 문장에 연결
 
 ## Implementation constraints
 - Framework/styling system: 정적 HTML, Tailwind CDN, 기존 CSS

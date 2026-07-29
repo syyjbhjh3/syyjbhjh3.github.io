@@ -63,7 +63,6 @@
                 <a href="#resume-section" class="text-slate-700 hover:text-primary transition-colors">Resume</a>
                 <a href="#project-section" class="text-slate-700 hover:text-primary transition-colors">Project</a>
                 <a href="#blog-section" class="text-slate-700 hover:text-primary transition-colors">Blog</a>
-                <a href="#contact-section" class="text-slate-700 hover:text-primary transition-colors">Contact</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -80,7 +79,6 @@
                 <a href="#resume-section" class="hover:text-primary transition-colors">Resume</a>
                 <a href="#project-section" class="hover:text-primary transition-colors">Project</a>
                 <a href="#blog-section" class="hover:text-primary transition-colors">Blog</a>
-                <a href="#contact-section" class="hover:text-primary transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -106,9 +104,6 @@
                 <div class="hero-actions mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                     <a href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-white font-semibold shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5 hover:bg-blue-600">
                         이력서 보기
-                    </a>
-                    <a href="#contact-section" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-3 text-slate-700 font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
-                        연락하기
                     </a>
                 </div>
             </div>
@@ -349,6 +344,34 @@
                                         </div>
                                     </div>
 
+                                    <div class="space-y-6">
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">Oh My Viola — AI Agent Runtime Platform (2026.01 ~ Present)</b>
+                                            <p class="text-xs text-gray-500 mb-2">TypeScript, Node.js, MCP, Codex, Claude Code, Cursor, OMX</p>
+                                            <img src="images/architecture/omv-architecture.svg" class="my-4 w-full rounded border" alt="Oh My Viola Runtime Architecture">
+                                            <p class="text-sm italic text-gray-500">- Why: 서로 다른 AI 개발 도구와 Viola 업무 흐름을 하나의 안전한 로컬 실행 체계로 표준화</p>
+                                            <ul class="mt-4 list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>서로 다른 AI 개발 도구를 Viola 업무 환경에서 일관되게 사용할 수 있도록 실행 체계와 CLI를 설계·개발</li>
+                                                <li>Jira, GitLab, Figma, 플랫폼 운영 업무를 재사용 가능한 Agent Skill과 워크플로로 표준화</li>
+                                                <li>로컬 인증, 읽기 전용 근거 수집, 승인 경계를 기본값으로 적용해 운영 환경의 안전성을 확보</li>
+                                                <li>사용자별 업무 맥락을 유지하는 로컬 메모리와 런타임 계약을 구성해 반복 작업 비용을 절감</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                                            <b class="text-primary block mb-2">Viola 4.0 Kubernetes Platform Modernization (2026.03 ~ Present)</b>
+                                            <p class="text-xs text-gray-500 mb-2">Java, Spring Boot, Kubernetes, Hubble, Prometheus, Kubespray, Ansible, Harbor, Helm</p>
+                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
+                                                <li>VM·Bare Metal 클러스터 프로비저닝 초기화와 실행 흐름을 구현</li>
+                                                <li>노드별 접속 계정과 환경 차이를 지원하도록 프로비저닝 요청 모델을 개선</li>
+                                                <li>Hubble Prometheus 트래픽 지표를 Kubernetes 워크로드 노드와 엣지로 집계하는 리소스 토폴로지 API를 설계·구현</li>
+                                                <li>Pod의 OwnerReference를 추적해 상위 워크로드로 해석하고 네임스페이스·방향·리소스/트래픽 상태·조회 기간 필터를 제공</li>
+                                                <li>트래픽 양·지연·패킷 전송·L7 상세 조회를 분리하고 Hubble 미구성 시 빈 토폴로지를 반환하도록 안전하게 처리</li>
+                                                <li>패키징과 릴리스 통합 과정에서 실제 배포 환경 기준의 호환성을 검증</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                     <div class="space-y-4">
                                         <div class="border border-gray-100 rounded-xl overflow-hidden">
                                             <button type="button" class="w-full bg-gray-100 p-3 font-bold flex justify-between items-center text-left cursor-pointer" data-accordion-trigger aria-expanded="true" aria-controls="gitops-architecture-panel">
@@ -406,19 +429,6 @@
                                     </div>
 
                                     <div class="space-y-6">
-                                        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
-                                            <b class="text-primary block mb-2">Viola 4.0 Kubernetes Platform Modernization (2026.03 ~ Present)</b>
-                                            <p class="text-xs text-gray-500 mb-2">Java, Spring Boot, Kubernetes, Kubespray, Ansible, Harbor, Helm</p>
-                                            <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
-                                                <li>VM·Bare Metal 클러스터 프로비저닝 초기화와 실행 흐름을 구현</li>
-                                                <li>노드별 접속 계정과 환경 차이를 지원하도록 프로비저닝 요청 모델을 개선</li>
-                                                <li>Registry API를 특정 구현체에 종속되지 않는 Harbor Adapter 구조로 재구성</li>
-                                                <li>서비스 간 권한 조회와 리소스 식별 경로의 정합성을 개선</li>
-                                                <li>기존 시스템의 API·DTO 차이를 분석하고 단계적 전환 기준을 수립</li>
-                                                <li>패키징과 릴리스 통합 과정에서 실제 배포 환경 기준의 호환성을 검증</li>
-                                            </ul>
-                                        </div>
-
                                         <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
                                             <b class="text-primary block mb-2">HanaCloudia 2차 고도화 (2024.07 ~ 2024.12)</b>
                                             <ul class="list-disc pl-5 text-sm space-y-1 leading-6">
@@ -737,117 +747,6 @@
                     <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=4" target="_blank" rel="noopener noreferrer" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
                         Read on Notion <span class="icon-arrow-forward"></span>
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hire Me Section -->
-    <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(62,100,255,0.24),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(250,204,21,0.12),transparent_18%),linear-gradient(135deg,#0f172a_0%,#111827_42%,#020617_100%)]"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="cta-panel max-w-5xl mx-auto rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-md shadow-2xl p-8 md:p-12 text-white">
-                <div class="grid gap-8 lg:grid-cols-[1.4fr,0.9fr] lg:items-start">
-                    <div>
-                        <span class="text-primary uppercase tracking-[0.35em] text-sm font-semibold">Let’s Work Together</span>
-                        <h2 class="cta-heading text-4xl md:text-5xl font-bold leading-[1.15] mt-5 mb-5 max-w-3xl">
-                            운영과 개발 사이의 복잡함을
-                            <span class="text-yellow-300">더 단순하고 안정적인 구조</span>로
-                            바꾸는 일을 좋아합니다.
-                        </h2>
-                        <p class="text-lg md:text-xl leading-8 text-slate-100/90 max-w-2xl">
-                            플랫폼 자동화, 배포 체계, 관측성, 백엔드 설계를 한 흐름으로 연결합니다.
-                            제품과 운영이 함께 편해지는 구조를 만드는 팀과 잘 맞습니다.
-                        </p>
-                    </div>
-
-                    <div class="grid gap-4">
-                        <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
-                            <p class="text-xs uppercase tracking-[0.25em] text-slate-200/80 mb-2">Best Fit</p>
-                            <p class="text-xl font-semibold">Platform · Backend · DevOps</p>
-                        </div>
-                        <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
-                            <p class="text-xs uppercase tracking-[0.25em] text-slate-200/80 mb-2">Focus</p>
-                            <p class="text-lg font-semibold">IaC · GitOps · Observability</p>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="#contact-section" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-primary font-bold shadow-xl transition-all hover:-translate-y-0.5 hover:bg-slate-100">
-                                함께 이야기하기
-                            </a>
-                            <a href="https://github.com/syyjbhjh3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10">
-                                GitHub 보기
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-section" class="py-24 bg-white">
-        <div class="container mx-auto px-6 text-center mb-16">
-            <h1 class="text-8xl font-bold text-gray-100 absolute left-0 right-0 -mt-16 select-none z-0 hidden lg:block">Contact</h1>
-            <h2 class="text-4xl font-bold relative z-10 mb-4">함께 이야기해볼까요</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto leading-7">플랫폼, 백엔드, 운영 자동화에 대한 이야기를 편하게 나눌 수 있으면 좋겠습니다. 현재는 제품 운영 품질을 높이는 문제를 함께 푸는 팀과의 연결에 가장 열려 있습니다.</p>
-        </div>
-
-        <div class="container mx-auto px-6">
-            <div class="contact-shell grid gap-8 lg:grid-cols-[0.95fr,1.25fr] items-stretch">
-                <div class="contact-lead-card rounded-[2rem] bg-slate-950 text-white p-8 md:p-10 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.85)]">
-                    <p class="text-sky-300 uppercase tracking-[0.3em] text-xs font-semibold mb-4">Best Conversation Topics</p>
-                    <h3 class="text-3xl font-bold leading-tight mb-5">이런 대화라면 더 반갑습니다.</h3>
-                    <p class="text-slate-100 leading-7 mb-8">
-                        새로운 역할, 협업 제안, 플랫폼/백엔드/DevOps 관련 이야기라면 부담 없이 연락 주세요.
-                        특히 운영 자동화, GitOps, 관측성 개선, IaC/배포 구조 정리 같은 주제에 관심이 많습니다.
-                    </p>
-                    <div class="contact-topic-chips flex flex-wrap gap-3 text-sm text-white">
-                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Kubernetes</span>
-                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">GitOps</span>
-                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Spring Boot</span>
-                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Observability</span>
-                    </div>
-                </div>
-
-                <div class="contact-card-grid grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
-                            <span class="icon-map text-xl"></span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Address</h3>
-                        <p class="text-gray-500 leading-7">서울시 금천구 독산동</p>
-                        <p class="mt-3 text-sm leading-6 text-gray-400">서울권 오프라인 미팅이나 하이브리드 협업에 무리 없이 대응할 수 있습니다.</p>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
-                            <span class="icon-paper-plane text-xl"></span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Email</h3>
-                        <p class="text-gray-500 leading-7"><a href="mailto:syyjbhjh7@naver.com" class="underline decoration-primary underline-offset-4 hover:text-primary">syyjbhjh7@naver.com</a></p>
-                        <p class="mt-3 text-sm leading-6 text-gray-400">협업 제안, 포지션 문의, 사이드 프로젝트 관련 연락은 메일이 가장 빠릅니다.</p>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
-                            <span class="icon-globe text-xl"></span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">GitHub</h3>
-                        <p class="text-gray-500 leading-7"><a href="https://github.com/syyjbhjh3" target="_blank" rel="noopener noreferrer" class="hover:text-primary">github.com/syyjbhjh3</a></p>
-                        <p class="mt-3 text-sm leading-6 text-gray-400">운영 자동화와 실험적인 사이드 프로젝트를 지속적으로 정리하고 있습니다.</p>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-5">
-                            <span class="icon-document text-xl"></span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">Resume &amp; Notes</h3>
-                        <div class="flex flex-col gap-2 text-gray-500 leading-7">
-                            <a href="https://drive.google.com/file/d/12ugY5m64Wp_wGS3dp4o37HnqJwahy5uU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="hover:text-primary">이력서 보기</a>
-                            <a href="https://syyjbhjh7.notion.site/442edd064dae4590b98091ec34d8d923?v=e5d05bcaf3f641d8b2b281e1b97b9639&amp;pvs=43" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Notion 아카이브</a>
-                        </div>
-                        <p class="mt-3 text-sm leading-6 text-gray-400">이력서와 기록을 함께 보면 현재 관심사와 작업 방향을 더 빠르게 파악할 수 있습니다.</p>
-                    </div>
                 </div>
             </div>
         </div>

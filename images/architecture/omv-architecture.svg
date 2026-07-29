@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="title desc">
+  <title id="title">Oh My Viola Runtime Architecture</title>
+  <desc id="desc">Developer requests flow through the OMV CLI into agent runtimes, platform hooks, local state, safety services, and connected Viola workspaces.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111827"/>
+    </marker>
+    <style>
+      .label { font: 500 22px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 18px Arial, sans-serif; fill: #111827; }
+      .section { font: 600 25px Arial, sans-serif; fill: #111827; }
+      .box { fill: #fff; stroke: #111827; stroke-width: 2; }
+      .boundary { fill: none; stroke: #111827; stroke-width: 2; stroke-dasharray: 9 8; }
+      .flow { fill: none; stroke: #111827; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1500" height="900" fill="#fff"/>
+  <!-- Developer -->
+  <g transform="translate(40 96)">
+    <circle cx="42" cy="24" r="17" fill="#fff" stroke="#111827" stroke-width="2"/>
+    <circle cx="78" cy="24" r="17" fill="#fff" stroke="#111827" stroke-width="2"/>
+    <circle cx="60" cy="13" r="19" fill="#fff" stroke="#111827" stroke-width="2"/>
+    <path d="M12 72c3-25 17-37 30-37s27 12 30 37M48 72c3-30 19-45 30-45s27 15 30 45" fill="#fff" stroke="#111827" stroke-width="2"/>
+    <text x="60" y="104" text-anchor="middle" class="small">Developer</text>
+  </g>
+
+  <!-- OMV entry -->
+  <rect x="200" y="95" width="220" height="110" rx="20" class="box"/>
+  <circle cx="245" cy="150" r="24" fill="#3e64ff"/>
+  <text x="245" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">OMV</text>
+  <text x="285" y="143" class="label">omv CLI</text>
+  <text x="285" y="171" class="small">Wrapper</text>
+  <path d="M145 150H188" class="flow"/>
+
+  <!-- Agent runtimes -->
+  <rect x="500" y="72" width="930" height="220" rx="28" class="boundary"/>
+  <text x="965" y="64" text-anchor="middle" class="section">Agent Runtime Adapters</text>
+
+  <g>
+    <rect x="548" y="125" width="175" height="110" rx="18" class="box"/>
+    <circle cx="595" cy="180" r="24" fill="#111827"/>
+    <text x="595" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">C</text>
+    <text x="636" y="187" class="label">Codex</text>
+
+    <rect x="762" y="125" width="190" height="110" rx="18" class="box"/>
+    <circle cx="809" cy="180" r="24" fill="#d97757"/>
+    <text x="809" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">C</text>
+    <text x="850" y="187" class="label">Claude</text>
+
+    <rect x="991" y="125" width="175" height="110" rx="18" class="box"/>
+    <circle cx="1038" cy="180" r="24" fill="#3e64ff"/>
+    <text x="1038" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">⌁</text>
+    <text x="1079" y="187" class="label">Cursor</text>
+
+    <rect x="1205" y="125" width="180" height="110" rx="18" class="box"/>
+    <circle cx="1252" cy="180" r="24" fill="#64748b"/>
+    <text x="1252" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">OX</text>
+    <text x="1293" y="174" class="small">OMX</text>
+    <text x="1293" y="198" class="small">OMC</text>
+  </g>
+  <path d="M432 150H488" class="flow"/>
+
+  <!-- OMV local boundary -->
+  <rect x="120" y="360" width="1080" height="465" rx="30" class="boundary"/>
+  <text x="660" y="350" text-anchor="middle" class="section">OMV Local Overlay</text>
+
+  <rect x="190" y="430" width="260" height="115" rx="18" class="box"/>
+  <circle cx="235" cy="487" r="22" fill="#326ce5"/>
+  <path d="M225 487h20M235 477v20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <text x="275" y="478" class="label">Platform Hooks</text>
+  <text x="275" y="506" class="small">&amp; Agent Skills</text>
+
+  <rect x="530" y="430" width="260" height="115" rx="18" class="box"/>
+  <circle cx="575" cy="487" r="22" fill="#3e64ff"/>
+  <path d="M565 477h20v20h-20z" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="615" y="478" class="label">Canonical State</text>
+  <text x="615" y="506" class="small">&amp; Config</text>
+
+  <rect x="870" y="430" width="260" height="115" rx="18" class="box"/>
+  <circle cx="915" cy="487" r="22" fill="#f59e0b"/>
+  <path d="M904 493l7-9 6 5 9-13" fill="none" stroke="#fff" stroke-width="3"/>
+  <text x="955" y="478" class="label">Dashboard</text>
+  <text x="955" y="506" class="small">&amp; Task Radar</text>
+
+  <path d="M635 292V418" class="flow"/>
+  <path d="M462 487H518" class="flow"/>
+  <path d="M802 487H858" class="flow"/>
+
+  <!-- Local safety boundary -->
+  <rect x="210" y="620" width="900" height="145" rx="24" class="boundary"/>
+  <text x="660" y="610" text-anchor="middle" class="section">Local Safety Boundary</text>
+
+  <rect x="255" y="662" width="225" height="65" rx="15" class="box"/>
+  <circle cx="290" cy="694" r="15" fill="#16a34a"/>
+  <path d="M284 694l5 5 9-11" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="320" y="701" class="small">Local-only Auth</text>
+
+  <rect x="548" y="662" width="225" height="65" rx="15" class="box"/>
+  <circle cx="583" cy="694" r="15" fill="#7c3aed"/>
+  <path d="M576 695c0-10 14-10 14 0M580 688h6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="613" y="701" class="small">Private Memory</text>
+
+  <rect x="841" y="662" width="225" height="65" rx="15" class="box"/>
+  <circle cx="876" cy="694" r="15" fill="#dc2626"/>
+  <path d="M868 694h16M876 686v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="906" y="701" class="small">Read-only Evidence</text>
+
+  <path d="M660 557V608" class="flow"/>
+
+  <!-- Connected workspace -->
+  <rect x="1245" y="360" width="215" height="465" rx="28" class="boundary"/>
+  <text x="1352" y="350" text-anchor="middle" class="section">Viola Workspace</text>
+
+  <rect x="1270" y="430" width="165" height="85" rx="17" class="box"/>
+  <circle cx="1310" cy="472" r="20" fill="#fc6d26"/>
+  <text x="1310" y="479" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">H</text>
+  <text x="1342" y="465" class="small">viola-</text>
+  <text x="1342" y="490" class="small">harness</text>
+
+  <rect x="1270" y="555" width="165" height="85" rx="17" class="box"/>
+  <circle cx="1310" cy="597" r="20" fill="#3e64ff"/>
+  <text x="1310" y="604" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">AI</text>
+  <text x="1342" y="590" class="small">viola-ai-</text>
+  <text x="1342" y="615" class="small">config</text>
+
+  <rect x="1270" y="680" width="165" height="85" rx="17" class="box"/>
+  <circle cx="1310" cy="722" r="20" fill="#64748b"/>
+  <text x="1310" y="729" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">MCP</text>
+  <text x="1342" y="715" class="small">Runtime</text>
+  <text x="1342" y="740" class="small">Helpers</text>
+
+  <path d="M1258 472H1142" class="flow"/>
+  <path d="M1258 597H1140V530H802" class="flow"/>
+  <path d="M1258 722H1140V748H1078" class="flow"/>
+
+  <text x="660" y="865" text-anchor="middle" class="small">External runtimes remain updateable · Secrets stay local · Runtime evidence stays read-only</text>
+</svg>
